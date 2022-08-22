@@ -25,8 +25,8 @@ class SplashPage extends GetView<SplashController> {
             leading: IconButton(
               icon: const Icon(Icons.arrow_back),
               onPressed: () {
-                // Get.back(); // 这种方式返回无效
-                Get.offNamed("/");
+                Get.back(); // Get.offNamed("/splash")这种方式调整过来的，返回无效
+                // Get.offNamed("/");
               },
             ),
           ),

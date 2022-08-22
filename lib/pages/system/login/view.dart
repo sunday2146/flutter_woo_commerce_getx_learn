@@ -26,7 +26,7 @@ class LoginPage extends GetView<LoginController> {
           ),
           ElevatedButton(
             onPressed: () {
-              Get.offNamed("/splash");
+              Get.toNamed("/splash");
             },
             child: const Text("splash"),
           ),
