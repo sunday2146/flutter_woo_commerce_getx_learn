@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'common/index.dart';
 import 'common/routers/pages.dart';
 
 void main() {
@@ -28,9 +29,16 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-            // 路由
-      initialRoute: "/",
+
+      // // 路由
+      // initialRoute: "/",
+      // getPages: RoutePages.list,
+
+      // 路由
+      initialRoute: RouteNames.systemSplash, // 启动屏 splash
+      // initialRoute: RouteNames.systemWelcome, // 欢迎页 welcome
       getPages: RoutePages.list,
+      navigatorObservers: [RoutePages.observer],
 
       // home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
