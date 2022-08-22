@@ -7,9 +7,45 @@ class SplashPage extends GetView<SplashController> {
   const SplashPage({Key? key}) : super(key: key);
 
   // 主视图
+  // Widget _buildView() {
+  //   return const Center(
+  //     child: Text("SplashPage"),
+  //   );
+  // }
+
+  // 主视图
   Widget _buildView() {
-    return const Center(
-      child: Text("SplashPage"),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        // 文字标题1
+        GetBuilder<SplashController>(
+          id: "splash_title2",
+          builder: (_) {
+            return Center(
+              child: Text(controller.title),
+            );
+          },
+        ),
+
+        // 文字标题2
+        GetBuilder<SplashController>(
+          id: "splash_title1",
+          builder: (_) {
+            return Center(
+              child: Text(controller.title),
+            );
+          },
+        ),
+
+        // 按钮
+        ElevatedButton(
+          onPressed: () {
+            controller.onTap(DateTime.now().microsecondsSinceEpoch);
+          },
+          child: const Text("立刻点击"),
+        ),
+      ],
     );
   }
 
