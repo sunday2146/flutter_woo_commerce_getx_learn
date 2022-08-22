@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'common/index.dart';
-import 'common/routers/pages.dart';
 
 void main() {
   runApp(const MyApp());

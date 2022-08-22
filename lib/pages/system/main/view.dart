@@ -6,12 +6,12 @@ import 'index.dart';
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
 
+  // Avoid using private types in public APIs.
   @override
-  _MainPageState createState() => _MainPageState();
+  MainPageState createState() => MainPageState();
 }
 
-class _MainPageState extends State<MainPage>
-    with AutomaticKeepAliveClientMixin {
+class MainPageState extends State<MainPage> with AutomaticKeepAliveClientMixin {
   @override
   bool get wantKeepAlive => true;
 
