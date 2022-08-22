@@ -1,10 +1,10 @@
 import 'package:get/get.dart';
 
-class SplashController extends GetxController {
-  SplashController();
+class BottomSheetController extends GetxController {
+  BottomSheetController();
 
   _initData() {
-    update(["splash"]);
+    update(["bottom_sheet"]);
   }
 
   void onTap() {}

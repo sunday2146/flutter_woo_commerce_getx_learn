@@ -1,10 +1,10 @@
 import 'package:get/get.dart';
 
-class SplashController extends GetxController {
-  SplashController();
+class CarouselController extends GetxController {
+  CarouselController();
 
   _initData() {
-    update(["splash"]);
+    update(["carousel"]);
   }
 
   void onTap() {}

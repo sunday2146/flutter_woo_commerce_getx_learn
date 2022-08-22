@@ -1,10 +1,10 @@
 import 'package:get/get.dart';
 
-class SplashController extends GetxController {
-  SplashController();
+class TextFormController extends GetxController {
+  TextFormController();
 
   _initData() {
-    update(["splash"]);
+    update(["text_form"]);
   }
 
   void onTap() {}

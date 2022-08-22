@@ -1,10 +1,10 @@
 import 'package:get/get.dart';
 
-class SplashController extends GetxController {
-  SplashController();
+class WelcomeController extends GetxController {
+  WelcomeController();
 
   _initData() {
-    update(["splash"]);
+    update(["welcome"]);
   }
 
   void onTap() {}
