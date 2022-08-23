@@ -48,6 +48,8 @@ dependencies:
   package_info_plus: ^1.4.3+1
   shared_preferences: ^2.0.15
   dio: ^4.0.6
+  badges: ^2.0.3
+  flutter_svg: ^1.1.4
 
 dev_dependencies:
   flutter_test:
