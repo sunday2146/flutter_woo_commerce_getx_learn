@@ -53,12 +53,29 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+  flutter_launcher_icons: ^0.10.0
+
+# 设备启动图
+flutter_icons:
+  image_path_android: "assets/icons/launcher_android.png"
+  image_path_ios: "assets/icons/launcher_ios.png"
+  #  adaptive_icon_background: "launcher_android_background.png"
+  adaptive_icon_background: "#ffffff"
+  android: true # can specify file name here e.g. "ic_launcher"
+  ios: true # can specify file name here e.g. "My-Launcher-Icon"
+  #  image_path: "assets/icons/launcher_ios.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+
+  # 设置好后，需要在终端运行下面命令
+  # flutter pub get
+  # flutter pub run flutter_launcher_icons:main -f pubspec.yaml
+
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^2.0.0
+  flutter_lints: ^2.0.0 # 代码检查
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
