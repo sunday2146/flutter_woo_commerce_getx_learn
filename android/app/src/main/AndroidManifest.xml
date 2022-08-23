@@ -1,7 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ducafecat.woo_commerce.flutter_woo_commerce_getx_learn">
+    <!-- 修改 Android App 桌面图标名称: android:label="flutter_woo_commerce_getx_learn" -->
    <application
-        android:label="flutter_woo_commerce_getx_learn"
+        android:label="woo"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
