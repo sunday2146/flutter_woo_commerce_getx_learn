@@ -2,8 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'common/index.dart';
+import 'global.dart';
 
-void main() {
+// void main() {
+//   runApp(const MyApp());
+// }
+
+Future<void> main() async {
+  await Global.init();
   runApp(const MyApp());
 }
 
@@ -34,7 +40,8 @@ class MyApp extends StatelessWidget {
       // getPages: RoutePages.list,
 
       // 路由
-      initialRoute: RouteNames.systemSplash, // 启动屏 splash
+      initialRoute: RouteNames.systemSplash,
+      // 启动屏 splash
       // initialRoute: RouteNames.systemWelcome, // 欢迎页 welcome
       getPages: RoutePages.list,
       navigatorObservers: [RoutePages.observer],
