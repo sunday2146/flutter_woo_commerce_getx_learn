@@ -15,5 +15,5 @@ Map<String, String> localeEn = {
   LocaleKeys.commonMessageIncorrect: '@method incorrect',
 
   // 样式
-  LocaleKeys.stylesTitle: 'Sytles && Function',
+  LocaleKeys.stylesTitle: 'Styles && Function && Debug',
 };
