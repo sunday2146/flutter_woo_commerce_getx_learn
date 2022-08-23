@@ -43,7 +43,8 @@ dependencies:
 
   # getX 框架
   get: ^4.6.5
-  package_info_plus: 1.4.2
+  package_info_plus: ^1.4.3+1
+  shared_preferences: ^2.0.15
 
 dev_dependencies:
   flutter_test:
