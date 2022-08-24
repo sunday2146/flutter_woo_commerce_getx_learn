@@ -71,7 +71,7 @@ class LoginQuickPage extends GetView<LoginQuickController> {
             "Sign Up",
             textColor: const Color(0xff0274BC),
             textWeight: FontWeight.bold,
-          ),
+          ).paddingTop(6),
         ].toRow(
           mainAxisAlignment: MainAxisAlignment.center,
         ).paddingTop(6),

@@ -153,7 +153,7 @@ class RoutePages {
     ),
     GetPage(
       name: RouteNames.systemWelcome,
-      page: () => const WelcomePage(),
+      page: () => WelcomePage(),
     ),
   ];
 }
