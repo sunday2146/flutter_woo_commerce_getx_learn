@@ -22,6 +22,9 @@ class ConfigService extends GetxService {
 
   bool get isDarkModel => _isDarkModel.value;
 
+  // 是否首次打开
+  bool get isFirstOpen => Storage().getBool(Constants.storageFirstOpen);
+
   @override
   void onReady() {
     super.onReady();
@@ -32,6 +35,11 @@ class ConfigService extends GetxService {
 
   Future<void> getPlatform() async {
     _platform = await PackageInfo.fromPlatform();
+  }
+
+  // 标记已打开app
+  void setAlreadyOpen() {
+    Storage().setBool(Constants.storageFirstOpen, true);
   }
 
   // 初始 theme 主题

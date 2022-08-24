@@ -12,6 +12,10 @@ class RoutePages {
   // 列表
   static List<GetPage> list = [
     GetPage(
+      name: RouteNames.main, // app 首页
+      page: () => const MainPage(),
+    ),
+    GetPage(
       name: RouteNames.cartApplyPromoCode,
       page: () => const ApplyPromoCodePage(),
     ),
