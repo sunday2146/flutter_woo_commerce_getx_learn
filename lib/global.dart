@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 
 import 'common/index.dart';
@@ -6,7 +7,9 @@ import 'common/services/wp_http.dart';
 
 class Global {
   static Future<void> init() async {
-    WidgetsFlutterBinding.ensureInitialized(); // 等待Flutter初始化完成
+    // WidgetsFlutterBinding.ensureInitialized(); // 等待Flutter初始化完成
+    WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized(); // 等待Flutter初始化完成
+    FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
     // 工具类
     await Storage().init();

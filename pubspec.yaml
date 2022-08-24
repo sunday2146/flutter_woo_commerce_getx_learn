@@ -58,6 +58,7 @@ dependencies:
   flutter_svg: ^1.1.4
   extended_image: ^6.2.1
   flutter_screenutil: ^5.5.3+2
+  flutter_native_splash: ^2.2.8
 
 dev_dependencies:
   flutter_test:
@@ -65,7 +66,15 @@ dev_dependencies:
 
   flutter_launcher_icons: ^0.10.0
 
-# 设备启动图
+# 显示设备启动图，解决 Flutter App 启动开头的白屏问题
+flutter_native_splash:
+  color: "#ffffff"  # color 启动图背景色，这里我设置白色 #ffffff
+  image: "assets/icons/launcher_android.png" # image 启动图，可以放你的 logo，这张图背景透明
+
+  # 设置好后，需要在终端运行下面命令，生成各个平台的 splash ui 配置代码
+  # flutter pub run flutter_native_splash:create
+
+# app 图标
 flutter_icons:
   image_path_android: "assets/icons/launcher_android.png"
   image_path_ios: "assets/icons/launcher_ios.png"
