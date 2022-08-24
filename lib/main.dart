@@ -24,8 +24,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
 
       // 路由
-      // initialRoute: RouteNames.systemSplash,
-      initialRoute: RouteNames.stylesStylesIndex,
+      initialRoute: RouteNames.systemSplash,
+      // initialRoute: RouteNames.stylesStylesIndex,
       getPages: RoutePages.list,
       navigatorObservers: [RoutePages.observer],
 

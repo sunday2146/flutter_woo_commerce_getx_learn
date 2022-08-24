@@ -1,11 +1,10 @@
-import 'package:flutter_woo_commerce_getx_learn/pages/system/login_quick/index.dart';
 import 'package:get/get.dart';
 
-class SplashController extends GetxController {
-  SplashController();
+class LoginQuickController extends GetxController {
+  LoginQuickController();
 
   _initData() {
-    update(["splash"]);
+    update(["login_quick"]);
   }
 
   void onTap() {}
@@ -19,8 +18,6 @@ class SplashController extends GetxController {
   void onReady() {
     super.onReady();
     _initData();
-
-    Get.to(const LoginQuickPage());
   }
 
   // @override
