@@ -20,11 +20,14 @@ class SplashController extends GetxController {
     super.onReady();
     _initData();
 
-    Get.to(const LoginQuickPage());
+    // 延时 3 秒跳转到
+    Future.delayed(Duration(seconds: 3), () {
+      Get.to(const LoginQuickPage());
+    });
   }
 
-  // @override
-  // void onClose() {
-  //   super.onClose();
-  // }
+// @override
+// void onClose() {
+//   super.onClose();
+// }
 }
