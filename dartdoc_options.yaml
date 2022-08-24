@@ -1,0 +1,3 @@
+dartdoc:
+  nodoc: ["lib/pages/**/*.dart"]
+  # 这里排除了 pages 目录，我们只要 common 生成定义文件就行
