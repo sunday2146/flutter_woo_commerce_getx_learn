@@ -5,6 +5,12 @@ description: A new Flutter project.
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
+# 开发人员信息：
+# 技术人员: 闵军
+# By: ybmj@vip.163.com ,
+# QQ: 153248043
+# https://www.cnblogs.com/ybmj/
+
 # The following defines the version and build number for your application.
 # A version number is three numbers separated by dots, like 1.2.43
 # followed by an optional build number separated by a +.
@@ -50,6 +56,7 @@ dependencies:
   dio: ^4.0.6
   badges: ^2.0.3
   flutter_svg: ^1.1.4
+  extended_image: ^6.2.1
 
 dev_dependencies:
   flutter_test:
