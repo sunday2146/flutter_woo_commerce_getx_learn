@@ -8,8 +8,7 @@ import 'common/services/wp_http.dart';
 class Global {
   static Future<void> init() async {
     // WidgetsFlutterBinding.ensureInitialized(); // 等待Flutter初始化完成
-    WidgetsBinding widgetsBinding =
-        WidgetsFlutterBinding.ensureInitialized(); // 等待Flutter初始化完成
+    WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized(); // 等待Flutter初始化完成
     FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
     // 工具类
@@ -23,5 +22,6 @@ class Global {
     // 初始化服务
     Get.put<ConfigService>(ConfigService()); // Get.put 方式直接注入
     Get.put<WPHttpService>(WPHttpService()); // Get.put 方式直接注入
+    Get.put<UserService>(UserService()); // Get.put 方式直接注入
   }
 }

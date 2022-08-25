@@ -4,4 +4,6 @@ class Constants {
   static const wpApiBaseUrl = 'https://wpapi.ducafecat.tech'; // wp 服务器
   static const storageThemeCode = 'theme_code'; // Theme 主题
   static const storageFirstOpen = 'first_open'; // 首次打开
+  static const storageToken = 'token'; // 登录成功后 token
+  static const storageProfile = 'profile'; // 用户资料缓存
 }
