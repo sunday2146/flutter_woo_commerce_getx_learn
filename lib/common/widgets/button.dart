@@ -335,7 +335,8 @@ class ButtonWidget extends StatelessWidget {
       case ButtonWidgetType.secondary:
         return MaterialStateProperty.all(
           RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(borderRadius ?? AppRadius.button)),
+            borderRadius: BorderRadius.all(
+                Radius.circular(borderRadius ?? AppRadius.button)),
           ),
         );
       case ButtonWidgetType.textFilled:
@@ -343,8 +344,8 @@ class ButtonWidget extends StatelessWidget {
       case ButtonWidgetType.iconTextUpDownOutlined:
         return MaterialStateProperty.all(
           RoundedRectangleBorder(
-            borderRadius:
-                BorderRadius.all(Radius.circular(borderRadius ?? AppRadius.buttonTextFilled)),
+            borderRadius: BorderRadius.all(
+                Radius.circular(borderRadius ?? AppRadius.buttonTextFilled)),
           ),
         );
       case ButtonWidgetType.textRoundFilled:

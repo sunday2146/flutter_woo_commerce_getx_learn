@@ -15,8 +15,10 @@ class StylesIndexController extends GetxController {
     var en = Translation.supportedLocales[0];
     var zh = Translation.supportedLocales[1];
 
-    ConfigService.to
-        .onLocaleUpdate(ConfigService.to.locale.toLanguageTag() == en.toLanguageTag() ? zh : en);
+    ConfigService.to.onLocaleUpdate(
+        ConfigService.to.locale.toLanguageTag() == en.toLanguageTag()
+            ? zh
+            : en);
     update(["styles_index"]);
   }
 

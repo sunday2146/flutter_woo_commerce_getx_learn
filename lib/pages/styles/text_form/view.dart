@@ -63,7 +63,7 @@ class TextFormPage extends GetView<TextFormController> {
       ),
     );
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return GetBuilder<TextFormController>(

@@ -39,7 +39,8 @@ class LoginQuickPage extends GetView<LoginQuickController> {
 
         // username input
         InputWidget.iconTextFilled(IconWidget.icon(Icons.person))
-            .paddingBottom(AppSpace.listRow * 2).paddingTop(6),
+            .paddingBottom(AppSpace.listRow * 2)
+            .paddingTop(6),
 
         // password
         const TextWidget.body1(
@@ -49,7 +50,8 @@ class LoginQuickPage extends GetView<LoginQuickController> {
 
         // password input
         InputWidget.iconTextFilled(IconWidget.icon(Icons.lock_outline))
-            .paddingBottom(29).paddingTop(6),
+            .paddingBottom(29)
+            .paddingTop(6),
 
         // 登录按钮
         const ButtonWidget.primary(
@@ -72,9 +74,11 @@ class LoginQuickPage extends GetView<LoginQuickController> {
             textColor: const Color(0xff0274BC),
             textWeight: FontWeight.bold,
           ).paddingTop(6),
-        ].toRow(
-          mainAxisAlignment: MainAxisAlignment.center,
-        ).paddingTop(6),
+        ]
+            .toRow(
+              mainAxisAlignment: MainAxisAlignment.center,
+            )
+            .paddingTop(6),
       ]
           .toColumn(
             crossAxisAlignment: CrossAxisAlignment.start,

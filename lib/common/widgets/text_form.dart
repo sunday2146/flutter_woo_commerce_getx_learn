@@ -87,7 +87,9 @@ class _TextFormWidgetState extends State<TextFormWidget> {
           ? InputDecoration(
               hintText: widget.hintText, // 提示文字
               // 标题
-              labelText: widget.isMustBeEnter == true ? "* ${widget.labelText}" : widget.labelText,
+              labelText: widget.isMustBeEnter == true
+                  ? "* ${widget.labelText}"
+                  : widget.labelText,
               // 密码按钮
               suffixIcon: IconButton(
                 onPressed: () {
@@ -96,7 +98,9 @@ class _TextFormWidgetState extends State<TextFormWidget> {
                   });
                 },
                 icon: Icon(
-                  _isShowObscureIcon == true ? Icons.visibility : Icons.visibility_off,
+                  _isShowObscureIcon == true
+                      ? Icons.visibility
+                      : Icons.visibility_off,
                   size: 15,
                   color: AppColors.surfaceVariant,
                 ),
@@ -104,7 +108,9 @@ class _TextFormWidgetState extends State<TextFormWidget> {
             )
           : InputDecoration(
               hintText: widget.hintText,
-              labelText: widget.isMustBeEnter == true ? "* ${widget.labelText}" : widget.labelText,
+              labelText: widget.isMustBeEnter == true
+                  ? "* ${widget.labelText}"
+                  : widget.labelText,
             ),
       // 校验
       validator: widget.validator,
