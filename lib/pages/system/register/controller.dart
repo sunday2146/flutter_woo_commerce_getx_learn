@@ -1,13 +1,26 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class RegisterController extends GetxController {
   RegisterController();
+
+  TextEditingController userNameController = TextEditingController(text: "ducafecat5"); // 用户名
+  TextEditingController emailController = TextEditingController(text: "ducafecat5@gmail.com"); // 邮件
+  TextEditingController firstNameController = TextEditingController(text: "ducafe"); // 姓
+  TextEditingController lastNameController = TextEditingController(text: "cat"); // 名
+  TextEditingController passwordController = TextEditingController(text: "12345678"); // 密码
 
   _initData() {
     update(["register"]);
   }
 
   void onTap() {}
+
+  // 注册
+  void onSignUp() {}
+
+  // 登录
+  void onSignIn() {}
 
   // @override
   // void onInit() {
@@ -20,8 +33,14 @@ class RegisterController extends GetxController {
     _initData();
   }
 
-  // @override
-  // void onClose() {
-  //   super.onClose();
-  // }
+  // 释放
+  @override
+  void onClose() {
+    super.onClose();
+    userNameController.dispose();
+    emailController.dispose();
+    firstNameController.dispose();
+    lastNameController.dispose();
+    passwordController.dispose();
+  }
 }

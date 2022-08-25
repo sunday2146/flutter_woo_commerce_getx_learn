@@ -27,4 +27,21 @@ Map<String, String> localeEn = {
   LocaleKeys.welcomeSkip: 'Skip',
   LocaleKeys.welcomeNext: 'Next',
   LocaleKeys.welcomeStart: 'Get Started',
+
+  // 登录、注册 - 通用
+  LocaleKeys.loginForgotPassword: 'Forgot Password?',
+  LocaleKeys.loginSignIn: 'Sign In',
+  LocaleKeys.loginSignUp: 'Sign Up',
+  LocaleKeys.loginOrText: '- OR -',
+
+  // 注册 - new user
+  LocaleKeys.registerTitle: 'Register',
+  LocaleKeys.registerDesc: 'Sign up to continue',
+  LocaleKeys.registerFormName: 'User Name',
+  LocaleKeys.registerFormEmail: 'Email',
+  LocaleKeys.registerFormPhoneNumber: 'Phone number',
+  LocaleKeys.registerFormPassword: 'Password',
+  LocaleKeys.registerFormFirstName: 'First name',
+  LocaleKeys.registerFormLastName: 'Last name',
+  LocaleKeys.registerHaveAccount: 'Already have an account?',
 };

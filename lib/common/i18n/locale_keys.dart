@@ -25,4 +25,21 @@ class LocaleKeys {
   static const welcomeSkip = 'welcome_skip';
   static const welcomeNext = 'welcome_next';
   static const welcomeStart = 'welcome_start';
+
+  // 登录、注册 - 通用
+  static const loginForgotPassword = 'login_forgot_password';
+  static const loginSignIn = 'login_sign_in';
+  static const loginOrText = 'login_or_text';
+  static const loginSignUp = 'login_sign_up';
+
+  // 注册 - register user
+  static const registerTitle = 'register_title';
+  static const registerDesc = 'register_desc';
+  static const registerFormName = 'register_form_name';
+  static const registerFormEmail = 'register_form_email';
+  static const registerFormPhoneNumber = 'register_form_phone_number';
+  static const registerFormPassword = 'register_form_password';
+  static const registerFormFirstName = 'register_form_first_name';
+  static const registerFormLastName = 'register_form_last_name';
+  static const registerHaveAccount = 'register_have_account';
 }
