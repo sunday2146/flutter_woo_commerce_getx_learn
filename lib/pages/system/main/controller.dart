@@ -4,7 +4,13 @@ import 'package:get/get.dart';
 class MainController extends GetxController {
   MainController();
 
-  _initData() {
+  _initData() async {
+    // 读取用户 profile
+    await UserService.to.getProfile();
+
+    // 测试用
+    Get.toNamed(RouteNames.systemLogin);
+
     update(["main"]);
   }
 
@@ -23,8 +29,8 @@ class MainController extends GetxController {
     Get.toNamed(RouteNames.systemRegister);
   }
 
-  // @override
-  // void onClose() {
-  //   super.onClose();
-  // }
+// @override
+// void onClose() {
+//   super.onClose();
+// }
 }

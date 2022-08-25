@@ -18,13 +18,21 @@ class SplashController extends GetxController {
   // }
 
   _jumpToPage() {
-    // 样式配置
-    if (ConfigService.to.isFirstOpen == false) {
-      Get.offAllNamed(RouteNames.systemWelcome);
-    } else {
-      Get.offAllNamed(RouteNames.main);
-      // Get.offAllNamed(RouteNames.stylesStylesIndex);
-    }
+    Future.delayed(const Duration(seconds: 1)).then((_) {
+      if (!ConfigService.to.isFirstOpen) {
+        Get.offAllNamed(RouteNames.main);
+      } else {
+        Get.offAllNamed(RouteNames.systemWelcome);
+      }
+    });
+
+    // // 样式配置
+    // if (ConfigService.to.isFirstOpen == false) {
+    //   Get.offAllNamed(RouteNames.systemWelcome);
+    // } else {
+    //   Get.offAllNamed(RouteNames.main);
+    //   // Get.offAllNamed(RouteNames.stylesStylesIndex);
+    // }
 
     // // 延时跳转到欢迎页
     // Future.delayed(const Duration(seconds: 1), () {
