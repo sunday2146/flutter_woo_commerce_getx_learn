@@ -22,7 +22,8 @@ class SplashController extends GetxController {
     if (ConfigService.to.isFirstOpen == false) {
       Get.offAllNamed(RouteNames.systemWelcome);
     } else {
-      Get.offAllNamed(RouteNames.main);
+      // Get.offAllNamed(RouteNames.main);
+      Get.offAllNamed(RouteNames.stylesStylesIndex);
     }
 
     // // 延时跳转到欢迎页
