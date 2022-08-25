@@ -7,16 +7,11 @@ class RegisterController extends GetxController {
 
   GlobalKey formKey = GlobalKey<FormState>();
 
-  TextEditingController userNameController =
-      TextEditingController(text: "ducafecat5"); // 用户名
-  TextEditingController emailController =
-      TextEditingController(text: "ducafecat5@gmail.com"); // 邮件
-  TextEditingController firstNameController =
-      TextEditingController(text: "ducafe"); // 姓
-  TextEditingController lastNameController =
-      TextEditingController(text: "cat"); // 名
-  TextEditingController passwordController =
-      TextEditingController(text: "12345678"); // 密码
+  TextEditingController userNameController = TextEditingController(text: "ducafecat5"); // 用户名
+  TextEditingController emailController = TextEditingController(text: "ducafecat5@gmail.com"); // 邮件
+  TextEditingController firstNameController = TextEditingController(text: "ducafe"); // 姓
+  TextEditingController lastNameController = TextEditingController(text: "cat"); // 名
+  TextEditingController passwordController = TextEditingController(text: "12345678"); // 密码
 
   _initData() {
     update(["register"]);
@@ -46,7 +41,9 @@ class RegisterController extends GetxController {
   }
 
   // 登录
-  void onSignIn() {}
+  void onSignIn() {
+    Get.offNamed(RouteNames.systemLogin);
+  }
 
   // @override
   // void onInit() {
