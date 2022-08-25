@@ -19,16 +19,16 @@ class RegisterPinController extends GetxController {
       Loading.show();
 
       // 暂时提交，后续改 aes 加密后处理
-      // bool isOk = await UserApi.register(req);
-      // if (isOk) {
-      //   Loading.success(
-      //       LocaleKeys.commonMessageSuccess.trParams({"method": "Register"}));
-      //   Get.back(result: true);
-      // }
+      bool isOk = await UserApi.register(req);
+      if (isOk) {
+        Loading.success(LocaleKeys.commonMessageSuccess.trParams({"method": "Register"}));
+        Get.back(result: true);
+      }
 
       // 提示成功
-      Loading.success(LocaleKeys.commonMessageSuccess.trParams({"method": "Register"}));
-      Get.back(result: true);
+      // Loading.success(
+      //     LocaleKeys.commonMessageSuccess.trParams({"method": "Register"}));
+      // Get.back(result: true);
     } finally {
       Loading.dismiss();
     }
