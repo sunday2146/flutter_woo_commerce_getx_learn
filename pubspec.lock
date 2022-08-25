@@ -406,6 +406,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "5.0.0"
+  pinput:
+    dependency: "direct main"
+    description:
+      name: pinput
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "2.2.12"
   platform:
     dependency: transitive
     description:
@@ -488,6 +495,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.99"
+  smart_auth:
+    dependency: transitive
+    description:
+      name: smart_auth
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.0.5"
   source_span:
     dependency: transitive
     description:

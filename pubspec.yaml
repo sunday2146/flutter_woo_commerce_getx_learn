@@ -61,6 +61,7 @@ dependencies:
   flutter_native_splash: ^2.2.8
   carousel_slider: ^4.1.1
   validatorless: ^1.2.1
+  pinput: ^2.2.12
 
 dev_dependencies:
   flutter_test:
