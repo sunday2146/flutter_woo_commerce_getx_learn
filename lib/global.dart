@@ -13,6 +13,7 @@ class Global {
 
     // 工具类
     await Storage().init();
+    Loading();
 
     // await Future.wait([
     //   Get.putAsync<ConfigService>(() async => await ConfigService().init()), // Get.put 方式直接注入
