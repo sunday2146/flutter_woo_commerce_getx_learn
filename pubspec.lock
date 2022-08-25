@@ -544,6 +544,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.0.4"
+  validatorless:
+    dependency: "direct main"
+    description:
+      name: validatorless
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.2.1"
   vector_math:
     dependency: transitive
     description:

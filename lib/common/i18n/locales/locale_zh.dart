@@ -14,6 +14,15 @@ Map<String, String> localeZh = {
   LocaleKeys.commonMessageSuccess: '@method 成功',
   LocaleKeys.commonMessageIncorrect: '@method 不正确',
 
+  // 验证提示
+  LocaleKeys.validatorRequired: '字段不能为空',
+  LocaleKeys.validatorEmail: '请输入 email 格式',
+  LocaleKeys.validatorMin: '长度不能小于 @size',
+  LocaleKeys.validatorMax: '长度不能大于 @size',
+  LocaleKeys.validatorPassword: '密码长度必须 大于 @min 小于 @max',
+
+  //////////////////////////////////////////////////////////////////////////////
+
   // 样式
   LocaleKeys.stylesTitle: '样式 && 功能 && 调试',
 
