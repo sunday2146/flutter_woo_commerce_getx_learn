@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_woo_commerce_getx_learn/common/index.dart';
 import 'package:get/get.dart';
 
 class RegisterController extends GetxController {
@@ -22,6 +23,7 @@ class RegisterController extends GetxController {
   void onSignUp() {
     if ((formKey.currentState as FormState).validate()) {
       // 验证通过提交数据
+      Get.toNamed(RouteNames.systemRegisterPin);
     }
   }
 

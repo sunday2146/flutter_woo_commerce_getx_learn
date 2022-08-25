@@ -53,4 +53,10 @@ Map<String, String> localeZh = {
   LocaleKeys.registerFormFirstName: '姓',
   LocaleKeys.registerFormLastName: '名',
   LocaleKeys.registerHaveAccount: '你有现成账号?',
+
+  // 注册PIN - register pin
+  LocaleKeys.registerPinTitle: '验证',
+  LocaleKeys.registerPinDesc: '我们将向您发送PIN码以继续您的帐户',
+  LocaleKeys.registerPinFormTip: 'Pin',
+  LocaleKeys.registerPinButton: '提交',
 };

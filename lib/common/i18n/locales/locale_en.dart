@@ -53,4 +53,10 @@ Map<String, String> localeEn = {
   LocaleKeys.registerFormFirstName: 'First name',
   LocaleKeys.registerFormLastName: 'Last name',
   LocaleKeys.registerHaveAccount: 'Already have an account?',
+
+  // 注册PIN - register pin
+  LocaleKeys.registerPinTitle: 'Verification',
+  LocaleKeys.registerPinDesc: 'we will send you a Pin to continue your account',
+  LocaleKeys.registerPinFormTip: 'Pin',
+  LocaleKeys.registerPinButton: 'Submit',
 };
