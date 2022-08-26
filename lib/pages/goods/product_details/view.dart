@@ -47,6 +47,8 @@ class _ProductDetailsViewGetX extends GetView<ProductDetailsController> {
         tag: tag,
         builder: (_) {
           return CarouselWidget(
+            // 打开大图预览
+            onTap: controller.onGalleryTap,
             // 图片列表
             items: controller.bannerItems,
             // 当前索引
