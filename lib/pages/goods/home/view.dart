@@ -133,39 +133,43 @@ class HomePage extends GetView<HomeController> {
 
   // 主视图
   Widget _buildView() {
-    return CustomScrollView(
-      slivers: [
-        // 轮播广告
-        _buildBanner(),
+    return controller.flashShellProductList.isEmpty || controller.newProductProductList.isEmpty
+        ?
+        // 占位图
+        const PlaceholdWidget()
+        : CustomScrollView(
+            slivers: [
+              // 轮播广告
+              _buildBanner(),
 
-        // 分类导航
-        _buildCategories(),
+              // 分类导航
+              _buildCategories(),
 
-        // 推荐商品
-        // 栏位标题
-        controller.flashShellProductList.isNotEmpty
-            ? BuildListTitle(
-                title: LocaleKeys.gHomeFlashSell.tr,
-                subTitle: "03. 30. 30",
-                onTap: () => controller.onAllTap(true),
-              ).sliverToBoxAdapter().sliverPaddingHorizontal(AppSpace.page)
-            : const SliverToBoxAdapter(),
+              // 推荐商品
+              // 栏位标题
+              controller.flashShellProductList.isNotEmpty
+                  ? BuildListTitle(
+                      title: LocaleKeys.gHomeFlashSell.tr,
+                      subTitle: "03. 30. 30",
+                      onTap: () => controller.onAllTap(true),
+                    ).sliverToBoxAdapter().sliverPaddingHorizontal(AppSpace.page)
+                  : const SliverToBoxAdapter(),
 
-        // 列表
-        _buildFlashSell(),
+              // 列表
+              _buildFlashSell(),
 
-        // 最新商品
-        // 栏位标题
-        controller.newProductProductList.isNotEmpty
-            ? BuildListTitle(
-                title: LocaleKeys.gHomeNewProduct.tr,
-                onTap: () => controller.onAllTap(false),
-              ).sliverToBoxAdapter().sliverPaddingHorizontal(AppSpace.page)
-            : const SliverToBoxAdapter(),
-        // 列表
-        _buildNewSell(),
-      ],
-    );
+              // 最新商品
+              // 栏位标题
+              controller.newProductProductList.isNotEmpty
+                  ? BuildListTitle(
+                      title: LocaleKeys.gHomeNewProduct.tr,
+                      onTap: () => controller.onAllTap(false),
+                    ).sliverToBoxAdapter().sliverPaddingHorizontal(AppSpace.page)
+                  : const SliverToBoxAdapter(),
+              // 列表
+              _buildNewSell(),
+            ],
+          );
   }
 
   @override

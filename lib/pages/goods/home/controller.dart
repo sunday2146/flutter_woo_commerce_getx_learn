@@ -72,6 +72,9 @@ class HomeController extends GetxController {
     // 新商品
     newProductProductList = await ProductApi.products(ProductsReq());
 
+    // 模拟网络延迟 1 秒
+    await Future.delayed(const Duration(seconds: 1));
+
     update(["home"]);
   }
 
