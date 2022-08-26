@@ -9,7 +9,37 @@ class HomePage extends GetView<HomeController> {
 
   // 导航栏
   AppBar _buildAppBar() {
-    return AppBar();
+    return AppBar(
+      // 背景透明
+      backgroundColor: Colors.transparent,
+      // 取消阴影
+      elevation: 0,
+      // 标题栏左侧间距
+      titleSpacing: AppSpace.listItem,
+      // 搜索栏
+      title: InputWidget.search(
+        // 提示文字，多语言
+        hintText: LocaleKeys.gHomeNewProduct.tr,
+        // 点击事件
+        onTap: controller.onAppBarTap,
+        // 只读
+        readOnly: true,
+      ),
+      // 右侧的按钮区
+      actions: [
+        // 图标
+        IconWidget.svg(
+          AssetsSvgs.pNotificationsSvg,
+          size: 20,
+          isDot: true, // 未读消息 小圆点
+        )
+            .unconstrained() // 去掉约束, appBar 会有个约束下来
+            .padding(
+              left: AppSpace.listItem,
+              right: AppSpace.page,
+            ),
+      ],
+    );
   }
 
   // 轮播广告
