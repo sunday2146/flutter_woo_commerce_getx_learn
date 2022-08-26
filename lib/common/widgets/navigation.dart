@@ -22,10 +22,7 @@ class BuildNavigation extends StatelessWidget {
   final Function(int) onTap;
 
   const BuildNavigation(
-      {Key? key,
-      required this.currentIndex,
-      required this.items,
-      required this.onTap})
+      {Key? key, required this.currentIndex, required this.items, required this.onTap})
       : super(key: key);
 
   @override
@@ -50,7 +47,10 @@ class BuildNavigation extends StatelessWidget {
           ),
         ]
             .toColumn(
-              mainAxisSize: MainAxisSize.min,
+              // 修复底部导航穿透问题
+              // mainAxisSize: MainAxisSize.min, // bug: 该行导致底部导航穿透问题
+              mainAxisAlignment: MainAxisAlignment.center, // 居中
+              mainAxisSize: MainAxisSize.max, // 撑满
             )
             .onTap(() => onTap(i))
             .expanded(),
