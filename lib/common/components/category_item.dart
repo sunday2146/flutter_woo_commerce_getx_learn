@@ -47,7 +47,9 @@ class CategoryListItemWidget extends StatelessWidget {
 
         // 背景色
         .backgroundColor(
-          selectId == category.id ? AppColors.onSurfaceVariant : Colors.transparent,
+          selectId == category.id
+              ? AppColors.onSurfaceVariant
+              : Colors.transparent,
         )
         .onTap(() => onTap?.call(category.id!));
   }

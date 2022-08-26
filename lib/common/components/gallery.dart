@@ -56,8 +56,9 @@ class GalleryWidget extends StatelessWidget {
             // 标记颜色
             backgroundColor: AppColors.highlight,
             // 进度
-            value:
-                event == null ? 0 : event.cumulativeBytesLoaded / (event.expectedTotalBytes ?? 0),
+            value: event == null
+                ? 0
+                : event.cumulativeBytesLoaded / (event.expectedTotalBytes ?? 0),
           ).tightSize(30).center(),
 
           // 图片个数

@@ -11,3 +11,4 @@ export 'refresher.dart';
 export 'placeholder.dart';
 export 'appbar.dart';
 export 'gallery.dart';
+export 'colors_list.dart';

@@ -42,8 +42,10 @@ class LoginPage extends GetView<LoginController> {
           labelText: LocaleKeys.registerFormName.tr,
           validator: Validatorless.multiple([
             Validatorless.required(LocaleKeys.validatorRequired.tr),
-            Validatorless.min(3, LocaleKeys.validatorMin.trParams({"size": "3"})),
-            Validatorless.max(20, LocaleKeys.validatorMax.trParams({"size": "20"})),
+            Validatorless.min(
+                3, LocaleKeys.validatorMin.trParams({"size": "3"})),
+            Validatorless.max(
+                20, LocaleKeys.validatorMax.trParams({"size": "20"})),
           ]),
         ).paddingBottom(AppSpace.listRow.w),
 
@@ -65,7 +67,9 @@ class LoginPage extends GetView<LoginController> {
         ).paddingBottom(AppSpace.listRow.w * 2),
 
         // Forgot Password?
-        TextWidget.body1(LocaleKeys.loginForgotPassword.tr).alignRight().paddingBottom(50.w),
+        TextWidget.body1(LocaleKeys.loginForgotPassword.tr)
+            .alignRight()
+            .paddingBottom(50.w),
 
         // 登录按钮
         ButtonWidget.primary(

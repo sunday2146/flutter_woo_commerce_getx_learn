@@ -35,7 +35,8 @@ class _MainViewGetX extends GetView<MainController> {
       // 防止连续点击两次退出
       onWillPop: () async {
         if (_lastPressedAt == null ||
-            DateTime.now().difference(_lastPressedAt!) > const Duration(seconds: 1)) {
+            DateTime.now().difference(_lastPressedAt!) >
+                const Duration(seconds: 1)) {
           _lastPressedAt = DateTime.now();
           Loading.toast('Press again to exit');
           return false;

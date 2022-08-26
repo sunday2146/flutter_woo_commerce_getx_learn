@@ -126,14 +126,17 @@ class HomePage extends GetView<HomeController> {
             crossAxisSpacing: AppSpace.listItem,
             childAspectRatio: 0.8,
           ),
-        ).sliverPadding(bottom: AppSpace.page).sliverPaddingHorizontal(AppSpace.page);
+        )
+            .sliverPadding(bottom: AppSpace.page)
+            .sliverPaddingHorizontal(AppSpace.page);
       },
     );
   }
 
   // 主视图
   Widget _buildView() {
-    return controller.flashShellProductList.isEmpty || controller.newProductProductList.isEmpty
+    return controller.flashShellProductList.isEmpty ||
+            controller.newProductProductList.isEmpty
         ?
         // 占位图
         const PlaceholdWidget()
@@ -152,7 +155,9 @@ class HomePage extends GetView<HomeController> {
                       title: LocaleKeys.gHomeFlashSell.tr,
                       subTitle: "03. 30. 30",
                       onTap: () => controller.onAllTap(true),
-                    ).sliverToBoxAdapter().sliverPaddingHorizontal(AppSpace.page)
+                    )
+                      .sliverToBoxAdapter()
+                      .sliverPaddingHorizontal(AppSpace.page)
                   : const SliverToBoxAdapter(),
 
               // 列表
@@ -164,7 +169,9 @@ class HomePage extends GetView<HomeController> {
                   ? BuildListTitle(
                       title: LocaleKeys.gHomeNewProduct.tr,
                       onTap: () => controller.onAllTap(false),
-                    ).sliverToBoxAdapter().sliverPaddingHorizontal(AppSpace.page)
+                    )
+                      .sliverToBoxAdapter()
+                      .sliverPaddingHorizontal(AppSpace.page)
                   : const SliverToBoxAdapter(),
               // 列表
               _buildNewSell(),

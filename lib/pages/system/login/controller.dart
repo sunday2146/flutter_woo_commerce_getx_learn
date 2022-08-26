@@ -6,8 +6,10 @@ class LoginController extends GetxController {
   LoginController();
 
   /// 定义输入控制器
-  TextEditingController userNameController = TextEditingController(text: "ducafecat5");
-  TextEditingController passwordController = TextEditingController(text: "123456");
+  TextEditingController userNameController =
+      TextEditingController(text: "ducafecat5");
+  TextEditingController passwordController =
+      TextEditingController(text: "123456");
 
   /// 表单 key
   GlobalKey formKey = GlobalKey<FormState>();

@@ -51,7 +51,8 @@ class MyApp extends StatelessWidget {
             navigatorObservers: [RoutePages.observer],
 
             // 样式
-            theme: ConfigService.to.isDarkModel ? AppTheme.dark : AppTheme.light,
+            theme:
+                ConfigService.to.isDarkModel ? AppTheme.dark : AppTheme.light,
             // 多语言
             translations: Translation(),
             // 词典

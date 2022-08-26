@@ -100,7 +100,8 @@ class CategoryController extends GetxController {
 
   _initData() async {
     // 读缓存
-    var stringCategories = Storage().getString(Constants.storageProductsCategories);
+    var stringCategories =
+        Storage().getString(Constants.storageProductsCategories);
     categoryItems = stringCategories != ""
         ? jsonDecode(stringCategories).map<CategoryModel>((item) {
             return CategoryModel.fromJson(item);

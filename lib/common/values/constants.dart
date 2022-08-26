@@ -18,6 +18,9 @@ class Constants {
   // 商品分类
   static const storageProductsCategories = 'home_categories';
 
+  // 颜色定义
+  static const storageProductsAttributesColors = 'products_attributes_colors';
+
   // 首页离线
   static const storageHomeBanner = 'home_banner';
   static const storageHomeCategories = 'home_categories';

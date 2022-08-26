@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_woo_commerce_getx_learn/common/index.dart';
 import 'package:get/get.dart';
@@ -23,6 +25,12 @@ class ProductDetailsController extends GetxController with GetSingleTickerProvid
   // tab 控制器
   int tabIndex = 0;
 
+  // 颜色列表
+  List<KeyValueModel<AttributeModel>> colors = [];
+
+  // 选中颜色列表
+  List<String> colorKeys = [];
+
   // 拉取商品详情
   _loadProduct() async {
     // 商品详情
@@ -39,11 +47,27 @@ class ProductDetailsController extends GetxController with GetSingleTickerProvid
     }
   }
 
+  // 读取缓存
+  _loadCache() async {
+    // 颜色列表
+    var stringColors = Storage().getString(Constants.storageProductsAttributesColors);
+
+    colors = stringColors != ""
+        ? jsonDecode(stringColors).map<KeyValueModel<AttributeModel>>((item) {
+            var arrt = AttributeModel.fromJson(item);
+            return KeyValueModel(key: "${arrt.name}", value: arrt);
+          }).toList()
+        : [];
+  }
+
   _initData() async {
     await _loadProduct();
 
     // 初始化 tab 控制器
     tabController = TabController(length: 3, vsync: this);
+
+    // 读取缓存
+    await _loadCache();
 
     update(["product_details"]);
   }
@@ -67,6 +91,12 @@ class ProductDetailsController extends GetxController with GetSingleTickerProvid
     tabIndex = index;
     tabController.animateTo(index);
     update(["product_tab"]);
+  }
+
+  // 颜色选中
+  void onColorTap(List<String> keys) {
+    colorKeys = keys;
+    update(["product_colors"]);
   }
 
   // @override
