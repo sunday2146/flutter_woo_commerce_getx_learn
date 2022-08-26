@@ -14,6 +14,10 @@ class Constants {
   static const aesKey = 'aH5aH5bG0dC6aA3oN0cK4aU5jU6aK2lN';
   static const aesIV = 'hK6eB4aE1aF3gH5q';
 
+  // 基础数据
+  // 商品分类
+  static const storageProductsCategories = 'home_categories';
+
   // 首页离线
   static const storageHomeBanner = 'home_banner';
   static const storageHomeCategories = 'home_categories';
