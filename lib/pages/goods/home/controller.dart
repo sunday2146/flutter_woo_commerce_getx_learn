@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter_woo_commerce_getx_learn/common/index.dart';
 import 'package:get/get.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
@@ -72,10 +74,55 @@ class HomeController extends GetxController {
     // 新商品
     newProductProductList = await ProductApi.products(ProductsReq());
 
+    // 保存离线数据
+    Storage().setJson(Constants.storageHomeBanner, bannerItems);
+    Storage().setJson(Constants.storageHomeCategories, categoryItems);
+    Storage().setJson(Constants.storageHomeFlashSell, flashShellProductList);
+    Storage().setJson(Constants.storageHomeNewSell, newProductProductList);
+
     // 模拟网络延迟 1 秒
     await Future.delayed(const Duration(seconds: 1));
 
     update(["home"]);
+  }
+
+  // 读取缓存
+  Future<void> _loadCacheData() async {
+    var stringBanner = Storage().getString(Constants.storageHomeBanner);
+    var stringCategories = Storage().getString(Constants.storageHomeCategories);
+    var stringFlashSell = Storage().getString(Constants.storageHomeFlashSell);
+    var stringNewSell = Storage().getString(Constants.storageHomeNewSell);
+
+    bannerItems = stringBanner != ""
+        ? jsonDecode(stringBanner).map<KeyValueModel>((item) {
+            return KeyValueModel.fromJson(item);
+          }).toList()
+        : [];
+
+    categoryItems = stringCategories != ""
+        ? jsonDecode(stringCategories).map<CategoryModel>((item) {
+            return CategoryModel.fromJson(item);
+          }).toList()
+        : [];
+
+    flashShellProductList = stringFlashSell != ""
+        ? jsonDecode(stringFlashSell).map<ProductModel>((item) {
+            return ProductModel.fromJson(item);
+          }).toList()
+        : [];
+
+    newProductProductList = stringNewSell != ""
+        ? jsonDecode(stringNewSell).map<ProductModel>((item) {
+            return ProductModel.fromJson(item);
+          }).toList()
+        : [];
+
+    if (bannerItems.isNotEmpty ||
+        categoryItems.isNotEmpty ||
+        flashShellProductList.isNotEmpty ||
+        newProductProductList.isNotEmpty) {
+      update(["home"]);
+    }
   }
 
   // 上拉加载新商品
@@ -131,10 +178,11 @@ class HomeController extends GetxController {
 
   void onTap() {}
 
-  // @override
-  // void onInit() {
-  //   super.onInit();
-  // }
+  @override
+  void onInit() {
+    super.onInit();
+    _loadCacheData();
+  }
 
   @override
   void onReady() {
