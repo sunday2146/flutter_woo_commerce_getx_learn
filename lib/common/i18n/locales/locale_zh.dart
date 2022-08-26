@@ -75,4 +75,10 @@ Map<String, String> localeZh = {
   LocaleKeys.loginBackDesc: '登陆后继续',
   LocaleKeys.loginBackFieldEmail: '账号',
   LocaleKeys.loginBackFieldPassword: '登陆密码',
+
+  // 商品 - 首页
+  LocaleKeys.gHomeSearch: '搜索商品',
+  LocaleKeys.gHomeFlashSell: '热卖商品',
+  LocaleKeys.gHomeNewProduct: '新上商品',
+  LocaleKeys.gHomeMore: '所有',
 };

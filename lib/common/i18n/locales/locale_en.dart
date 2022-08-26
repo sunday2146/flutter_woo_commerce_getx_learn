@@ -75,4 +75,10 @@ Map<String, String> localeEn = {
   LocaleKeys.loginBackDesc: 'Sign in to continue',
   LocaleKeys.loginBackFieldEmail: 'Name',
   LocaleKeys.loginBackFieldPassword: 'Password',
+
+  // 商品 - 首页
+  LocaleKeys.gHomeSearch: 'Search Product',
+  LocaleKeys.gHomeFlashSell: 'Flash Sell',
+  LocaleKeys.gHomeNewProduct: 'New Product',
+  LocaleKeys.gHomeMore: 'ALL',
 };
