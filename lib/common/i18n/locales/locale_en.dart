@@ -2,6 +2,9 @@ import '../locale_keys.dart';
 
 /// 多语言 英文
 Map<String, String> localeEn = {
+  //////////////////////////////////////////////////////////////////////////////
+  // 组件类别
+
   // 通用
   LocaleKeys.commonSearchInput: 'Enter keyword',
   LocaleKeys.commonBottomSave: 'Save',
@@ -21,7 +24,14 @@ Map<String, String> localeEn = {
   LocaleKeys.validatorMax: 'Length cannot be greater than @size',
   LocaleKeys.validatorPassword: 'password must have between @min and @max digits',
 
+  // APP 导航
+  LocaleKeys.tabBarHome: 'Home',
+  LocaleKeys.tabBarCart: 'Cart',
+  LocaleKeys.tabBarMessage: 'Message',
+  LocaleKeys.tabBarProfile: 'Profile',
+
   //////////////////////////////////////////////////////////////////////////////
+  // 业务类别
 
   // 样式
   LocaleKeys.stylesTitle: 'Styles && Function && Debug',

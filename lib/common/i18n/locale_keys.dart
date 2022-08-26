@@ -1,5 +1,8 @@
 /// 多语言 keys
 class LocaleKeys {
+  //////////////////////////////////////////////////////////////////////////////
+  // 组件类别
+
   // 通用
   static const commonBottomSave = 'common_bottom_save';
   static const commonBottomRemove = 'common_bottom_remove';
@@ -19,7 +22,14 @@ class LocaleKeys {
   static const validatorMax = 'validator_max';
   static const validatorPassword = 'validator_password';
 
+  // APP 主导航
+  static const tabBarHome = 'tab_bar_home';
+  static const tabBarCart = 'tab_bar_cart';
+  static const tabBarMessage = 'tab_bar_message';
+  static const tabBarProfile = 'tab_bar_profile';
+
   //////////////////////////////////////////////////////////////////////////////
+  // 业务类别
 
   // 样式
   static const stylesTitle = 'styles_title';
