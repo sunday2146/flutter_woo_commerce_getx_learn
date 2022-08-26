@@ -61,9 +61,22 @@ class HomePage extends GetView<HomeController> {
         .sliverPaddingHorizontal(AppSpace.page);
   }
 
-  // 分类导航
+// 分类导航
   Widget _buildCategories() {
-    return Container().sliverToBoxAdapter().sliverPaddingHorizontal(AppSpace.page);
+    return <Widget>[
+      for (var i = 0; i < controller.categoryItems.length; i++)
+        CategoryListItemWidget(
+          category: controller.categoryItems[i],
+          onTap: (categoryId) => controller.onCategoryTap(categoryId),
+        ).paddingRight(AppSpace.listItem)
+    ]
+        .toListView(
+          scrollDirection: Axis.horizontal,
+        )
+        .height(90.w)
+        .paddingVertical(AppSpace.listRow)
+        .sliverToBoxAdapter()
+        .sliverPaddingHorizontal(AppSpace.page);
   }
 
   // Flash Sell
