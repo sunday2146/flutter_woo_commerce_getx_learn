@@ -14,6 +14,7 @@ class RoutePages {
     GetPage(
       name: RouteNames.main, // app 首页
       page: () => const MainPage(),
+      binding: MainBinding(),
     ),
     GetPage(
       name: RouteNames.cartApplyPromoCode,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_woo_commerce_getx_learn/common/index.dart';
+import 'package:flutter_woo_commerce_getx_learn/pages/index.dart';
 import 'package:get/get.dart';
 
 import 'index.dart';
@@ -80,6 +81,13 @@ class _MainViewGetX extends GetView<MainController> {
           physics: const NeverScrollableScrollPhysics(),
           controller: controller.pageController,
           onPageChanged: controller.onIndexChanged,
+          children: const [
+            HomePage(),
+            CartIndexPage(),
+            MsgIndexPage(),
+            MyIndexPage(),
+          ],
+
           // children: const [
           //   // 加入空页面占位
           //   Center(child: Text("1", style: TextStyle(fontSize: 40, color: Colors.red))),
@@ -87,11 +95,12 @@ class _MainViewGetX extends GetView<MainController> {
           //   Center(child: Text("3", style: TextStyle(fontSize: 40, color: Colors.red))),
           //   Center(child: Text("4", style: TextStyle(fontSize: 40, color: Colors.red))),
           // ],
+
           // 可以使用 List<Widget>.generate() 方法创建列表
-          children: List<Widget>.generate(
-              4,
-              (i) => Center(
-                  child: Text("${i + 1}", style: TextStyle(fontSize: 40, color: Colors.red)))),
+          // children: List<Widget>.generate(
+          //     4,
+          //     (i) => Center(
+          //         child: Text("${i + 1}", style: TextStyle(fontSize: 40, color: Colors.red)))),
         ),
       ),
     );
@@ -102,14 +111,7 @@ class _MainViewGetX extends GetView<MainController> {
     return GetBuilder<MainController>(
       init: MainController(),
       id: "main",
-      builder: (_) {
-        return Scaffold(
-          appBar: AppBar(title: const Text("main")),
-          body: SafeArea(
-            child: _buildView(),
-          ),
-        );
-      },
+      builder: (_) => _buildView(),
     );
   }
 }
