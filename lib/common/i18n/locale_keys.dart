@@ -86,4 +86,12 @@ class LocaleKeys {
 
   // 商品 - 分类
   static const gCategoryTitle = "goods_category_title";
+
+  // 商品 - 详情
+  static const gDetailTitle = "goods_detail_title";
+  static const gDetailTabProduct = "goods_detail_tab_product";
+  static const gDetailTabDetails = "goods_detail_tab_details";
+  static const gDetailTabReviews = "goods_detail_tab_reviews";
+  static const gDetailBtnAddCart = "goods_detail_btn_add_cart";
+  static const gDetailBtnBuy = "goods_detail_btn_buy";
 }

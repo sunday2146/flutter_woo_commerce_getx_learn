@@ -88,4 +88,12 @@ Map<String, String> localeZh = {
 
   // 商品 - 分类
   LocaleKeys.gCategoryTitle: '所有分类',
+
+  // 商品 - 详情
+  LocaleKeys.gDetailTitle: '商品信息',
+  LocaleKeys.gDetailTabProduct: '规格',
+  LocaleKeys.gDetailTabDetails: '说明',
+  LocaleKeys.gDetailTabReviews: '评论',
+  LocaleKeys.gDetailBtnAddCart: '加入购物车',
+  LocaleKeys.gDetailBtnBuy: '立刻购买',
 };
