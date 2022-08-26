@@ -79,4 +79,8 @@ class LocaleKeys {
   static const gHomeFlashSell = 'goods_home_flash_shell';
   static const gHomeNewProduct = 'goods_home_new_product';
   static const gHomeMore = 'goods_home_more';
+
+  // 商品 - 列表
+  static const gFlashSellTitle = "goods_flash_sell_title";
+  static const gNewsTitle = "goods_news_title";
 }
