@@ -36,6 +36,20 @@ class TabProductView extends GetView<ProductDetailsController> {
           ).paddingBottom(AppSpace.listRow * 2);
         },
       ),
+
+      // 尺寸
+      _buildTitle("Size"),
+      GetBuilder<ProductDetailsController>(
+        id: "product_sizes",
+        tag: uniqueTag,
+        builder: (_) {
+          return TagsListWidget(
+            itemList: controller.sizes,
+            keys: controller.sizeKeys,
+            onTap: controller.onSizeTap,
+          ).paddingBottom(AppSpace.listRow * 2);
+        },
+      ),
     ]
         .toColumn(
           crossAxisAlignment: CrossAxisAlignment.start,

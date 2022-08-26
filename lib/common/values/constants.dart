@@ -21,6 +21,9 @@ class Constants {
   // 颜色定义
   static const storageProductsAttributesColors = 'products_attributes_colors';
 
+  // 尺寸定义
+  static const storageProductsAttributesSizes = 'products_attributes_sizes';
+
   // 首页离线
   static const storageHomeBanner = 'home_banner';
   static const storageHomeCategories = 'home_categories';

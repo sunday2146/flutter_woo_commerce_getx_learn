@@ -77,11 +77,13 @@ class HomeController extends GetxController {
     // 颜色
     var attributeColors = await ProductApi.attributes(1);
 
-    // 保存离线数据
-    Storage().setJson(Constants.storageProductsAttributesColors, attributeColors);
-    Storage().setJson(Constants.storageProductsCategories, categoryItems);
+    // 尺寸
+    var attributeSizes = await ProductApi.attributes(2);
 
     // 保存离线数据
+    Storage().setJson(Constants.storageProductsAttributesSizes, attributeSizes);
+    Storage().setJson(Constants.storageProductsAttributesColors, attributeColors);
+    Storage().setJson(Constants.storageProductsCategories, categoryItems);
     Storage().setJson(Constants.storageHomeBanner, bannerItems);
     Storage().setJson(Constants.storageHomeCategories, categoryItems);
     Storage().setJson(Constants.storageHomeFlashSell, flashShellProductList);
