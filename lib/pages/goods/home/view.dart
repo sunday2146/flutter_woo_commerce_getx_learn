@@ -79,9 +79,28 @@ class HomePage extends GetView<HomeController> {
         .sliverPaddingHorizontal(AppSpace.page);
   }
 
-  // Flash Sell
+  // 推荐商品
   Widget _buildFlashSell() {
-    return Container().sliverToBoxAdapter().sliverPaddingHorizontal(AppSpace.page);
+    return <Widget>[
+      for (var i = 0; i < controller.flashShellProductList.length; i++)
+        ProductItemWidget(
+          controller.flashShellProductList[i],
+          imgHeight: 117.w,
+          imgWidth: 120.w,
+        )
+            .constrained(
+              width: 120.w,
+              height: 170.w,
+            )
+            .paddingRight(AppSpace.listItem)
+    ]
+        .toListView(
+          scrollDirection: Axis.horizontal,
+        )
+        .height(170.w)
+        .paddingBottom(AppSpace.listRow)
+        .sliverToBoxAdapter()
+        .sliverPaddingHorizontal(AppSpace.page);
   }
 
   // New Sell
@@ -99,13 +118,17 @@ class HomePage extends GetView<HomeController> {
         // 分类导航
         _buildCategories(),
 
-        // Flash Sell
-        // title
-        Text(LocaleKeys.gHomeFlashSell.tr)
-            .sliverToBoxAdapter()
-            .sliverPaddingHorizontal(AppSpace.page),
+        // 推荐商品
+        // 栏位标题
+        controller.flashShellProductList.isNotEmpty
+            ? BuildListTitle(
+                title: LocaleKeys.gHomeFlashSell.tr,
+                subTitle: "03. 30. 30",
+                onTap: () => controller.onAllTap(true),
+              ).sliverToBoxAdapter().sliverPaddingHorizontal(AppSpace.page)
+            : const SliverToBoxAdapter(),
 
-        // list
+        // 列表
         _buildFlashSell(),
 
         // new product
