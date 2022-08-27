@@ -40,6 +40,16 @@ class MyAddressPage extends GetView<MyAddressController> {
           ),
 
           // Country
+          TextFormWidget(
+            onTap: controller.onCountryPicker,
+            readOnly: true,
+            isMustBeEnter: true,
+            controller: controller.countryController,
+            labelText: LocaleKeys.addressCountry.tr,
+            validator: Validatorless.multiple([
+              Validatorless.required("The field is obligatory"),
+            ]),
+          ),
 
           // State
 

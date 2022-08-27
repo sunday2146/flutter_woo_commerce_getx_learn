@@ -25,3 +25,6 @@ export 'woo/order_model/order_model.dart';
 // \lib\common\models\woo\order_model\shipping.dart
 export 'woo/order_model/billing.dart';
 export 'woo/order_model/shipping.dart';
+
+export 'woo/continents_model/continents_model.dart';
+export 'woo/continents_model/country.dart';
