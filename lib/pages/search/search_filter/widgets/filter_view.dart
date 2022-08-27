@@ -27,6 +27,26 @@ class FilterView extends GetView<SearchFilterController> {
     );
   }
 
+  // 尺寸选择
+  Widget _buildSizes() {
+    return GetBuilder<SearchFilterController>(
+      id: "filter_sizes",
+      builder: (_) {
+        return TagsListWidget(
+          onTap: controller.onSizeTap,
+          itemList: controller.sizes,
+          keys: controller.sizeKeys,
+          bgSelectedColor: AppColors.highlight,
+          textSelectedColor: AppColors.onPrimary,
+          isCircular: true,
+          size: 24,
+          textSize: 9,
+          textWeight: FontWeight.w400,
+        ).paddingBottom(AppSpace.listRow * 2);
+      },
+    );
+  }
+
   Widget _buildView() {
     return <Widget>[
       // 顶部
@@ -35,6 +55,10 @@ class FilterView extends GetView<SearchFilterController> {
       // 价格
       _buildTitle(LocaleKeys.searchFilterPrice.tr),
       _buildPriceRange(),
+
+      // 尺寸
+      _buildTitle(LocaleKeys.searchFilterSize.tr),
+      _buildSizes(),
 
       // end
     ]
