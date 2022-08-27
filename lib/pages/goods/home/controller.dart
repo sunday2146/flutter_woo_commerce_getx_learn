@@ -70,8 +70,7 @@ class HomeController extends GetxController {
     // 分类
     categoryItems = await ProductApi.categories();
     // 推荐商品
-    flashShellProductList =
-        await ProductApi.products(ProductsReq(featured: true));
+    flashShellProductList = await ProductApi.products(ProductsReq(featured: true));
     // 新商品
     newProductProductList = await ProductApi.products(ProductsReq());
 
@@ -83,8 +82,7 @@ class HomeController extends GetxController {
 
     // 保存离线数据
     Storage().setJson(Constants.storageProductsAttributesSizes, attributeSizes);
-    Storage()
-        .setJson(Constants.storageProductsAttributesColors, attributeColors);
+    Storage().setJson(Constants.storageProductsAttributesColors, attributeColors);
     Storage().setJson(Constants.storageProductsCategories, categoryItems);
     Storage().setJson(Constants.storageHomeBanner, bannerItems);
     Storage().setJson(Constants.storageHomeCategories, categoryItems);
@@ -179,7 +177,9 @@ class HomeController extends GetxController {
   }
 
   // 导航点击事件
-  void onAppBarTap() {}
+  void onAppBarTap() {
+    Get.toNamed(RouteNames.searchSearchIndex);
+  }
 
   // 分类点击事件
   void onCategoryTap(int categoryId) {
