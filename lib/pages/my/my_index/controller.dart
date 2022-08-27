@@ -1,3 +1,5 @@
+import 'package:flutter_woo_commerce_getx_learn/common/index.dart';
+import 'package:flutter_woo_commerce_getx_learn/pages/index.dart';
 import 'package:get/get.dart';
 
 class MyIndexController extends GetxController {
@@ -7,7 +9,11 @@ class MyIndexController extends GetxController {
     update(["my_index"]);
   }
 
-  void onTap() {}
+  // 注销
+  void onLogout() {
+    UserService.to.logout();
+    Get.find<MainController>().onJumpToPage(0);
+  }
 
   // @override
   // void onInit() {
@@ -20,8 +26,8 @@ class MyIndexController extends GetxController {
     _initData();
   }
 
-  // @override
-  // void onClose() {
-  //   super.onClose();
-  // }
+// @override
+// void onClose() {
+//   super.onClose();
+// }
 }
