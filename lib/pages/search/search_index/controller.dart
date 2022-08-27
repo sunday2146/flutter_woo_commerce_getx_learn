@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter_woo_commerce_getx_learn/common/index.dart';
 import 'package:get/get.dart';
 
 class SearchIndexController extends GetxController {
@@ -11,9 +12,36 @@ class SearchIndexController extends GetxController {
   // 搜索关键词
   final searchKeyWord = "".obs;
 
+  // Tags 列表
+  List<TagsModel> tagsList = [];
+
   // _initData() {
   //   update(["search_index"]);
   // }
+
+  /// 拉取数据
+  Future<bool> _loadSearch(String keyword) async {
+    if (keyword.trim().isEmpty == true) {
+      tagsList.clear();
+      return tagsList.isEmpty;
+    }
+
+    // 拉取数据
+    var result = await ProductApi.tags(TagsReq(
+      // 关键词
+      search: keyword,
+    ));
+
+    // 清空数据
+    tagsList.clear();
+
+    // 返回数据不为空
+    if (result.isNotEmpty) {
+      tagsList.addAll(result); // 添加数据
+    }
+
+    return tagsList.isEmpty;
+  }
 
   // 搜索栏位 - 防抖
   void searchDebounce() {
@@ -30,6 +58,7 @@ class SearchIndexController extends GetxController {
         }
 
         // 拉取数据
+        await _loadSearch(value as String);
         update(["search_index"]);
       },
 
@@ -42,6 +71,9 @@ class SearchIndexController extends GetxController {
       searchKeyWord.value = searchEditController.text;
     });
   }
+
+  // 列表项点击事件
+  void onListItemTap(TagsModel model) {}
 
   // @override
   // void onInit() {

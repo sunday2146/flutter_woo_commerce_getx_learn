@@ -110,8 +110,11 @@ class _ProductDetailsViewGetX extends GetView<ProductDetailsController> {
       textString,
       onTap: () => controller.onTapBarTap(index),
       borderRadius: 17,
-      textColor: controller.tabIndex == index ? AppColors.onPrimary : AppColors.secondary,
-      bgColor: controller.tabIndex == index ? AppColors.primary : Colors.transparent,
+      textColor: controller.tabIndex == index
+          ? AppColors.onPrimary
+          : AppColors.secondary,
+      bgColor:
+          controller.tabIndex == index ? AppColors.primary : Colors.transparent,
     ).tight(
       width: 100.w,
       height: 35.h,
@@ -211,7 +214,8 @@ class _ProductDetailsViewGetX extends GetView<ProductDetailsController> {
         return Scaffold(
           // 导航
           appBar: mainAppBarWidget(
-              titleString: controller.product?.name ?? LocaleKeys.gDetailTitle.tr), // 内容
+              titleString:
+                  controller.product?.name ?? LocaleKeys.gDetailTitle.tr), // 内容
           body: SafeArea(
             child: <Widget>[
               // 主视图
