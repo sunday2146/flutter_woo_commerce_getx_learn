@@ -22,7 +22,10 @@ class BuildNavigation extends StatelessWidget {
   final Function(int) onTap;
 
   const BuildNavigation(
-      {Key? key, required this.currentIndex, required this.items, required this.onTap})
+      {Key? key,
+      required this.currentIndex,
+      required this.items,
+      required this.onTap})
       : super(key: key);
 
   @override

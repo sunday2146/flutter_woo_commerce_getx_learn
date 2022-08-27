@@ -86,7 +86,8 @@ class TagsListWidget extends StatelessWidget {
           height: size ?? height,
           child: TextWidget.body2(
             item.value.name ?? "",
-            color: keys.hasValue(item.key) == true ? textSelectedColor : textColor,
+            color:
+                keys.hasValue(item.key) == true ? textSelectedColor : textColor,
             textAlign: TextAlign.center,
             weight: textWeight ?? FontWeight.bold,
             size: textSize,
@@ -95,10 +96,11 @@ class TagsListWidget extends StatelessWidget {
               // 装饰器
               .decorated(
                 // 背景
-                color: keys.hasValue(item.key) == true ? bgSelectedColor : bgColor,
+                color:
+                    keys.hasValue(item.key) == true ? bgSelectedColor : bgColor,
                 // 圆角
-                borderRadius:
-                    BorderRadius.circular(isCircular == true ? size ?? 24 : borderRadius ?? 3),
+                borderRadius: BorderRadius.circular(
+                    isCircular == true ? size ?? 24 : borderRadius ?? 3),
               )
               // 点击
               .onTap(() {

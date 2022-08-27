@@ -54,4 +54,18 @@ class ProductApi {
     attributes.sort((a, b) => a.menuOrder!.compareTo(b.menuOrder as int));
     return attributes;
   }
+
+  /// 评论列表
+  static Future<List<ReviewModel>> reviews(ReviewsReq? req) async {
+    var res = await WPHttpService.to.get(
+      '/products/reviews',
+      params: req?.toJson(),
+    );
+
+    List<ReviewModel> reviews = [];
+    for (var item in res.data) {
+      reviews.add(ReviewModel.fromJson(item));
+    }
+    return reviews;
+  }
 }
