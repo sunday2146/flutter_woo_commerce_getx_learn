@@ -106,4 +106,21 @@ class LocaleKeys {
   static const searchFilterBrand = "search_filter_brand";
   static const searchFilterGender = "search_filter_gender";
   static const searchFilterCondition = "search_filter_condition";
+
+  // 我的
+  static const myTabWishlist = "my_tab_wishlist";
+  static const myTabFollowing = "my_tab_following";
+  static const myTabVoucher = "my_tab_voucher";
+  static const myBtnMyOrder = "my_btn_my_order";
+  static const myBtnMyWallet = "my_btn_my_wallet";
+  static const myBtnEditProfile = "my_btn_edit_profile";
+  static const myBtnAddress = "my_btn_address";
+  static const myBtnNotification = "my_btn_notification";
+  static const myBtnLanguage = "my_btn_language";
+  static const myBtnTheme = "my_btn_theme";
+  static const myBtnWinGift = "my_btn_win_gift";
+  static const myBtnStyles = "my_btn_styles";
+  static const myBtnLogout = "my_btn_logout";
+  static const myBtnBillingAddress = "my_btn_billing_address";
+  static const myBtnShippingAddress = "my_btn_shipping_address";
 }
