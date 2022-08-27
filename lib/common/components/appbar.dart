@@ -13,8 +13,11 @@ AppBar mainAppBarWidget({
   double? iconSize, // 图标大小
 }) {
   return AppBar(
+    // 最左侧按钮
     leading: leading,
+    // 按钮和标题组件间距
     titleSpacing: titleSpace ?? AppSpace.listItem,
+    // 标题组件
     title: hintText != null
         ? InputWidget.textBorder(
             hintText: hintText,
@@ -22,6 +25,7 @@ AppBar mainAppBarWidget({
             onTap: onTap,
           )
         : Text(titleString ?? ""),
+    // 右侧按钮组
     actions: [
       // 搜索
       IconWidget.svg(

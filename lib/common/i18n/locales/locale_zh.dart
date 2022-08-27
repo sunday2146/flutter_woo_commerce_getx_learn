@@ -38,14 +38,11 @@ Map<String, String> localeZh = {
 
   // welcome 欢迎
   LocaleKeys.welcomeOneTitle: '选择您喜欢的产品',
-  LocaleKeys.welcomeOneDesc:
-      'Contrary to popular belief, Lorem Ipsum is not simply random text',
+  LocaleKeys.welcomeOneDesc: 'Contrary to popular belief, Lorem Ipsum is not simply random text',
   LocaleKeys.welcomeTwoTitle: '完成您的购物',
-  LocaleKeys.welcomeTwoDesc:
-      'Contrary to popular belief, Lorem Ipsum is not simply random text',
+  LocaleKeys.welcomeTwoDesc: 'Contrary to popular belief, Lorem Ipsum is not simply random text',
   LocaleKeys.welcomeThreeTitle: '足不出户的购物体验',
-  LocaleKeys.welcomeThreeDesc:
-      'Contrary to popular belief, Lorem Ipsum is not simply random text',
+  LocaleKeys.welcomeThreeDesc: 'Contrary to popular belief, Lorem Ipsum is not simply random text',
   LocaleKeys.welcomeSkip: '跳过',
   LocaleKeys.welcomeNext: '下一页',
   LocaleKeys.welcomeStart: '立刻开始',
@@ -99,4 +96,16 @@ Map<String, String> localeZh = {
   LocaleKeys.gDetailTabReviews: '评论',
   LocaleKeys.gDetailBtnAddCart: '加入购物车',
   LocaleKeys.gDetailBtnBuy: '立刻购买',
+
+  // 搜索
+  LocaleKeys.searchPlaceholder: '搜索商品',
+  LocaleKeys.searchOrder: '最佳匹配',
+  LocaleKeys.searchFilter: '筛选',
+  LocaleKeys.searchFilterPrice: '价格',
+  LocaleKeys.searchFilterSize: '尺寸',
+  LocaleKeys.searchFilterColor: '颜色',
+  LocaleKeys.searchFilterReview: '星级',
+  LocaleKeys.searchFilterBrand: '品牌',
+  LocaleKeys.searchFilterGender: '性别',
+  LocaleKeys.searchFilterCondition: '状况',
 };

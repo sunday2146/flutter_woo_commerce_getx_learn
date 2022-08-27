@@ -22,8 +22,7 @@ Map<String, String> localeEn = {
   LocaleKeys.validatorEmail: 'The field must be an email',
   LocaleKeys.validatorMin: 'Length cannot be less than @size',
   LocaleKeys.validatorMax: 'Length cannot be greater than @size',
-  LocaleKeys.validatorPassword:
-      'password must have between @min and @max digits',
+  LocaleKeys.validatorPassword: 'password must have between @min and @max digits',
 
   // APP 导航
   LocaleKeys.tabBarHome: 'Home',
@@ -39,14 +38,11 @@ Map<String, String> localeEn = {
 
   // welcome 欢迎
   LocaleKeys.welcomeOneTitle: 'Choose Your Desire Product',
-  LocaleKeys.welcomeOneDesc:
-      'Contrary to popular belief, Lorem Ipsum is not simply random text',
+  LocaleKeys.welcomeOneDesc: 'Contrary to popular belief, Lorem Ipsum is not simply random text',
   LocaleKeys.welcomeTwoTitle: 'Complete your shopping',
-  LocaleKeys.welcomeTwoDesc:
-      'Contrary to popular belief, Lorem Ipsum is not simply random text',
+  LocaleKeys.welcomeTwoDesc: 'Contrary to popular belief, Lorem Ipsum is not simply random text',
   LocaleKeys.welcomeThreeTitle: 'Get product at your door',
-  LocaleKeys.welcomeThreeDesc:
-      'Contrary to popular belief, Lorem Ipsum is not simply random text',
+  LocaleKeys.welcomeThreeDesc: 'Contrary to popular belief, Lorem Ipsum is not simply random text',
   LocaleKeys.welcomeSkip: 'Skip',
   LocaleKeys.welcomeNext: 'Next',
   LocaleKeys.welcomeStart: 'Get Started',
@@ -100,4 +96,16 @@ Map<String, String> localeEn = {
   LocaleKeys.gDetailTabReviews: 'Reviews',
   LocaleKeys.gDetailBtnAddCart: 'Add To Cart',
   LocaleKeys.gDetailBtnBuy: 'Buy Now',
+
+  // 搜索
+  LocaleKeys.searchPlaceholder: 'Search Product',
+  LocaleKeys.searchOrder: 'Best Match',
+  LocaleKeys.searchFilter: 'Filter',
+  LocaleKeys.searchFilterPrice: 'Price',
+  LocaleKeys.searchFilterSize: 'Size',
+  LocaleKeys.searchFilterColor: 'Color',
+  LocaleKeys.searchFilterReview: 'Review',
+  LocaleKeys.searchFilterBrand: 'Brand',
+  LocaleKeys.searchFilterGender: 'Gender',
+  LocaleKeys.searchFilterCondition: 'Condition',
 };

@@ -94,4 +94,16 @@ class LocaleKeys {
   static const gDetailTabReviews = "goods_detail_tab_reviews";
   static const gDetailBtnAddCart = "goods_detail_btn_add_cart";
   static const gDetailBtnBuy = "goods_detail_btn_buy";
+
+  // 搜索
+  static const searchPlaceholder = "search_placeholder";
+  static const searchOrder = "search_order";
+  static const searchFilter = "search_filter";
+  static const searchFilterPrice = "search_filter_price";
+  static const searchFilterSize = "search_filter_size";
+  static const searchFilterColor = "search_filter_color";
+  static const searchFilterReview = "search_filter_review";
+  static const searchFilterBrand = "search_filter_brand";
+  static const searchFilterGender = "search_filter_gender";
+  static const searchFilterCondition = "search_filter_condition";
 }
