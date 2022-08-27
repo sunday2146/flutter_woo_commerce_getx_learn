@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_woo_commerce_getx_learn/common/index.dart';
 import 'package:get/get.dart';
+import 'package:pull_to_refresh/pull_to_refresh.dart';
 
 import 'controller.dart';
 import 'index.dart';
@@ -214,10 +215,14 @@ class _ProductDetailsViewGetX extends GetView<ProductDetailsController> {
           body: SafeArea(
             child: <Widget>[
               // 主视图
-              _buildView(),
+              SmartRefresher(
+                controller: controller.mainRefreshController, // 刷新控制器
+                onRefresh: controller.onMainRefresh, // 下拉刷新回调
+                child: _buildView(),
+              ),
               // 底部按钮
               _buildButtons().positioned(
-                bottom: 0,
+                bottom: 10,
                 left: 0,
                 right: 0,
               ),

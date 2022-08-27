@@ -8,6 +8,11 @@ import 'package:pull_to_refresh/pull_to_refresh.dart';
 class ProductDetailsController extends GetxController with GetSingleTickerProviderStateMixin {
   ProductDetailsController();
 
+  // 主界面 刷新控制器
+  final RefreshController mainRefreshController = RefreshController(
+    initialRefresh: true,
+  );
+
   // 商品 id , 获取路由传递参数
   int? productId = Get.arguments['id'] ?? 0;
 
@@ -191,7 +196,7 @@ class ProductDetailsController extends GetxController with GetSingleTickerProvid
   }
 
   _initData() async {
-    await _loadProduct();
+    // await _loadProduct();
 
     // 初始化 tab 控制器
     tabController = TabController(length: 3, vsync: this);
@@ -249,6 +254,20 @@ class ProductDetailsController extends GetxController with GetSingleTickerProvid
     ));
   }
 
+  // main 下拉刷新
+  void onMainRefresh() async {
+    try {
+      // 拉取商品详情
+      await _loadProduct();
+      // 刷新数据
+      mainRefreshController.refreshCompleted();
+    } catch (error) {
+      // 刷新失败
+      mainRefreshController.refreshFailed();
+    }
+    update(["product_details"]);
+  }
+
   // @override
   // void onInit() {
   //   super.onInit();
@@ -264,6 +283,8 @@ class ProductDetailsController extends GetxController with GetSingleTickerProvid
   void onClose() {
     super.onClose();
     tabController.dispose();
+    // 销毁 主下拉控制器
+    mainRefreshController.dispose();
     // 释放 评论下拉控制器
     reviewsRefreshController.dispose();
   }
