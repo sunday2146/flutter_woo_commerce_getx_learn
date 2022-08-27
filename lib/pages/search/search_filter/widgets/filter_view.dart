@@ -62,6 +62,21 @@ class FilterView extends GetView<SearchFilterController> {
     );
   }
 
+  // 评级选择
+  Widget _buildStars() {
+    return GetBuilder<SearchFilterController>(
+      id: "filter_stars",
+      builder: (_) {
+        return StarsListWidget(
+          value: controller.starValue,
+          onTap: controller.onStarTap,
+          selectedColor: AppColors.highlight,
+          size: 18,
+        ).paddingBottom(AppSpace.listRow * 2);
+      },
+    );
+  }
+
   Widget _buildView() {
     return <Widget>[
       // 顶部
@@ -78,6 +93,10 @@ class FilterView extends GetView<SearchFilterController> {
       // 颜色
       _buildTitle(LocaleKeys.searchFilterColor.tr),
       _buildColors(),
+
+      // 评价
+      _buildTitle(LocaleKeys.searchFilterReview.tr),
+      _buildStars(),
 
       // end
     ]
