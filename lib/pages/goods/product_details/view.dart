@@ -109,11 +109,8 @@ class _ProductDetailsViewGetX extends GetView<ProductDetailsController> {
       textString,
       onTap: () => controller.onTapBarTap(index),
       borderRadius: 17,
-      textColor: controller.tabIndex == index
-          ? AppColors.onPrimary
-          : AppColors.secondary,
-      bgColor:
-          controller.tabIndex == index ? AppColors.primary : Colors.transparent,
+      textColor: controller.tabIndex == index ? AppColors.onPrimary : AppColors.secondary,
+      bgColor: controller.tabIndex == index ? AppColors.primary : Colors.transparent,
     ).tight(
       width: 100.w,
       height: 35.h,
@@ -158,6 +155,31 @@ class _ProductDetailsViewGetX extends GetView<ProductDetailsController> {
     );
   }
 
+  // 底部按钮
+  Widget _buildButtons() {
+    return controller.product == null
+        ? const SizedBox.shrink()
+        : <Widget>[
+            // 加入购物车
+            ButtonWidget.secondary(
+              LocaleKeys.gDetailBtnAddCart.tr,
+            ).expanded(),
+
+            // 间距
+            SizedBox(width: AppSpace.iconTextLarge),
+
+            // 立刻购买
+            ButtonWidget.primary(
+              LocaleKeys.gDetailBtnBuy.tr,
+            ).expanded(),
+          ]
+            .toRow(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+            )
+            .paddingHorizontal(AppSpace.page);
+  }
+
   // 主视图
   Widget _buildView() {
     return controller.product == null
@@ -188,10 +210,18 @@ class _ProductDetailsViewGetX extends GetView<ProductDetailsController> {
         return Scaffold(
           // 导航
           appBar: mainAppBarWidget(
-              titleString:
-                  controller.product?.name ?? LocaleKeys.gDetailTitle.tr), // 内容
+              titleString: controller.product?.name ?? LocaleKeys.gDetailTitle.tr), // 内容
           body: SafeArea(
-            child: _buildView(),
+            child: <Widget>[
+              // 主视图
+              _buildView(),
+              // 底部按钮
+              _buildButtons().positioned(
+                bottom: 0,
+                left: 0,
+                right: 0,
+              ),
+            ].toStack(),
           ),
         );
       },
