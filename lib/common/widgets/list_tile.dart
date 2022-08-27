@@ -67,8 +67,9 @@ class ListTileWidget extends StatelessWidget {
       if (subtitle != null) subtitle!,
       if (description != null) description!,
     ];
-    MainAxisAlignment titleMainAxisAlignment =
-        titles.length == 1 ? MainAxisAlignment.center : MainAxisAlignment.spaceBetween;
+    MainAxisAlignment titleMainAxisAlignment = titles.length == 1
+        ? MainAxisAlignment.center
+        : MainAxisAlignment.spaceBetween;
     ws.add(
       titles
           .toColumn(
@@ -80,8 +81,9 @@ class ListTileWidget extends StatelessWidget {
 
     // 右侧图标
     if (trailing != null) {
-      MainAxisAlignment trailingMainAxisAlignment =
-          trailing?.length == 1 ? MainAxisAlignment.center : MainAxisAlignment.spaceBetween;
+      MainAxisAlignment trailingMainAxisAlignment = trailing?.length == 1
+          ? MainAxisAlignment.center
+          : MainAxisAlignment.spaceBetween;
       ws.add(
         trailing!.toColumn(
           mainAxisAlignment: trailingMainAxisAlignment,

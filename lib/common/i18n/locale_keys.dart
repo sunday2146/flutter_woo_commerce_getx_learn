@@ -123,4 +123,18 @@ class LocaleKeys {
   static const myBtnLogout = "my_btn_logout";
   static const myBtnBillingAddress = "my_btn_billing_address";
   static const myBtnShippingAddress = "my_btn_shipping_address";
+
+  // 订单配送地址
+  static const addressViewTitle = "address_view_title";
+  static const addressFirstName = "address_first_name";
+  static const addressLastName = "address_last_name";
+  static const addressCountry = "address_country";
+  static const addressState = "address_state";
+  static const addressPostCode = "address_post_code";
+  static const addressCity = "address_city";
+  static const addressAddress1 = "address_address1";
+  static const addressAddress2 = "address_address2";
+  static const addressCompany = "address_company";
+  static const addressPhoneNumber = "address_phone_number";
+  static const addressEmail = "address_email";
 }

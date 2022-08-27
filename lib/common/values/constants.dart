@@ -31,7 +31,8 @@ class Constants {
   static const storageProductsAttributesGender = 'products_attributes_gender';
 
   // 新旧
-  static const storageProductsAttributesCondition = 'products_attributes_condition';
+  static const storageProductsAttributesCondition =
+      'products_attributes_condition';
 
   // 首页离线
   static const storageHomeBanner = 'home_banner';

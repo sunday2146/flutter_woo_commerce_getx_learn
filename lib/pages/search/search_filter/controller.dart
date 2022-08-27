@@ -47,7 +47,8 @@ class SearchFilterController extends GetxController {
   ];
 
   // 排序选中
-  KeyValueModel orderSelected = KeyValueModel(key: "rating", value: "Best Match");
+  KeyValueModel orderSelected =
+      KeyValueModel(key: "rating", value: "Best Match");
 
   // 价格范围 0~1000
   final List<double> priceRange = [100, 1000];
@@ -135,7 +136,8 @@ class SearchFilterController extends GetxController {
   void _loadCache() async {
     // 尺寸列表
     {
-      String result = Storage().getString(Constants.storageProductsAttributesSizes);
+      String result =
+          Storage().getString(Constants.storageProductsAttributesSizes);
       sizes = jsonDecode(result).map<KeyValueModel<AttributeModel>>((item) {
         var arrt = AttributeModel.fromJson(item);
         return KeyValueModel(key: "${arrt.name}", value: arrt);
@@ -144,7 +146,8 @@ class SearchFilterController extends GetxController {
 
     // 颜色列表
     {
-      String result = Storage().getString(Constants.storageProductsAttributesColors);
+      String result =
+          Storage().getString(Constants.storageProductsAttributesColors);
       colors = jsonDecode(result).map<KeyValueModel<AttributeModel>>((item) {
         var arrt = AttributeModel.fromJson(item);
         return KeyValueModel(key: "${arrt.name}", value: arrt);
@@ -153,7 +156,8 @@ class SearchFilterController extends GetxController {
 
     // 品牌列表
     {
-      String result = Storage().getString(Constants.storageProductsAttributesBrand);
+      String result =
+          Storage().getString(Constants.storageProductsAttributesBrand);
       brands = jsonDecode(result).map<KeyValueModel<AttributeModel>>((item) {
         var arrt = AttributeModel.fromJson(item);
         return KeyValueModel(key: "${arrt.name}", value: arrt);
@@ -162,7 +166,8 @@ class SearchFilterController extends GetxController {
 
     // 性别列表
     {
-      String result = Storage().getString(Constants.storageProductsAttributesGender);
+      String result =
+          Storage().getString(Constants.storageProductsAttributesGender);
       genders = jsonDecode(result).map<KeyValueModel<AttributeModel>>((item) {
         var arrt = AttributeModel.fromJson(item);
         return KeyValueModel(key: "${arrt.name}", value: arrt);
@@ -171,8 +176,10 @@ class SearchFilterController extends GetxController {
 
     // 新旧列表
     {
-      String result = Storage().getString(Constants.storageProductsAttributesCondition);
-      conditions = jsonDecode(result).map<KeyValueModel<AttributeModel>>((item) {
+      String result =
+          Storage().getString(Constants.storageProductsAttributesCondition);
+      conditions =
+          jsonDecode(result).map<KeyValueModel<AttributeModel>>((item) {
         var arrt = AttributeModel.fromJson(item);
         return KeyValueModel(key: "${arrt.name}", value: arrt);
       }).toList();

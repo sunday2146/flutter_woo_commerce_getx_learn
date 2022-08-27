@@ -63,7 +63,8 @@ class DropdownWidget extends StatelessWidget {
           color: iconColor ?? AppColors.primary,
         ),
         // 按钮 padding
-        buttonPadding: buttonPadding ?? EdgeInsets.symmetric(horizontal: AppSpace.iconTextSmail),
+        buttonPadding: buttonPadding ??
+            EdgeInsets.symmetric(horizontal: AppSpace.iconTextSmail),
         // 偏移
         offset: const Offset(0, 0),
       ),

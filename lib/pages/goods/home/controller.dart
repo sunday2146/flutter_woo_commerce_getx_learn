@@ -70,7 +70,8 @@ class HomeController extends GetxController {
     // 分类
     categoryItems = await ProductApi.categories();
     // 推荐商品
-    flashShellProductList = await ProductApi.products(ProductsReq(featured: true));
+    flashShellProductList =
+        await ProductApi.products(ProductsReq(featured: true));
     // 新商品
     newProductProductList = await ProductApi.products(ProductsReq());
     // 颜色
@@ -86,12 +87,15 @@ class HomeController extends GetxController {
 
     // 保存离线数据 - 基础数据
     Storage().setJson(Constants.storageProductsAttributesSizes, attributeSizes);
-    Storage().setJson(Constants.storageProductsAttributesColors, attributeColors);
-    Storage().setJson(Constants.storageProductsCategories, categoryItems);
-    Storage().setString(Constants.storageProductsAttributesBrand, jsonEncode(attributeBrand));
-    Storage().setString(Constants.storageProductsAttributesGender, jsonEncode(attributeGender));
     Storage()
-        .setString(Constants.storageProductsAttributesCondition, jsonEncode(attributeCondition));
+        .setJson(Constants.storageProductsAttributesColors, attributeColors);
+    Storage().setJson(Constants.storageProductsCategories, categoryItems);
+    Storage().setString(
+        Constants.storageProductsAttributesBrand, jsonEncode(attributeBrand));
+    Storage().setString(
+        Constants.storageProductsAttributesGender, jsonEncode(attributeGender));
+    Storage().setString(Constants.storageProductsAttributesCondition,
+        jsonEncode(attributeCondition));
 
     // 保存离线数据 - 首页业务数据
     Storage().setJson(Constants.storageHomeBanner, bannerItems);
