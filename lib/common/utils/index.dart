@@ -6,3 +6,4 @@ export 'loading.dart';
 export 'encrypt.dart';
 export 'picker.dart';
 export 'bottom_sheet.dart';
+export 'convert.dart';
