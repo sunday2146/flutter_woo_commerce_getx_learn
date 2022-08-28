@@ -44,28 +44,6 @@ class BuyNowPage extends GetView<BuyNowController> {
         .paddingBottom(AppSpace.listRow);
   }
 
-  // 底部按钮
-  Widget _buildButtons() {
-    return <Widget>[
-      // 取消
-      ButtonWidget.secondary(
-        LocaleKeys.commonBottomCancel.tr,
-        onTap: () => Get.back(),
-      ).expanded(),
-
-      // 间距
-      SizedBox(width: AppSpace.iconTextLarge),
-
-      // 立刻购买 Place Order
-      ButtonWidget.primary(
-        LocaleKeys.placeOrderBtnPlaceOrder.tr,
-        onTap: controller.onCheckout,
-      ).expanded(),
-    ].toRow(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-    );
-  }
-
   // 送货地址
   Widget _buildShipping() {
     return <Widget>[
@@ -126,6 +104,28 @@ class BuyNowPage extends GetView<BuyNowController> {
 
       //
     ].toColumn().paddingBottom(AppSpace.listRow);
+  }
+
+  // 底部按钮
+  Widget _buildButtons() {
+    return <Widget>[
+      // 取消
+      ButtonWidget.secondary(
+        LocaleKeys.commonBottomCancel.tr,
+        onTap: () => Get.back(),
+      ).expanded(),
+
+      // 间距
+      SizedBox(width: AppSpace.iconTextLarge),
+
+      // 立刻购买 Place Order
+      ButtonWidget.primary(
+        LocaleKeys.placeOrderBtnPlaceOrder.tr,
+        onTap: controller.onCheckout, // 立刻购买事件
+      ).expanded(),
+    ].toRow(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+    );
   }
 
   // 主视图
