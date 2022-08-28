@@ -86,6 +86,12 @@ class CartItem extends StatelessWidget {
             weight: FontWeight.bold,
           ).expanded(),
 
+          // 数量
+          QuantityWidget(
+            quantity: lineItem.quantity ?? 0,
+            onChange: (quantity) => onChangeQuantity?.call(quantity),
+          ),
+
           // end
         ].toRow().paddingTop(AppSpace.listRow),
 
