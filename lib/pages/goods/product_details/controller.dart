@@ -5,8 +5,7 @@ import 'package:flutter_woo_commerce_getx_learn/common/index.dart';
 import 'package:get/get.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
-class ProductDetailsController extends GetxController
-    with GetSingleTickerProviderStateMixin {
+class ProductDetailsController extends GetxController with GetSingleTickerProviderStateMixin {
   ProductDetailsController();
 
   // 主界面 刷新控制器
@@ -109,12 +108,10 @@ class ProductDetailsController extends GetxController
   // 读取缓存
   _loadCache() async {
     // 颜色列表
-    var stringColors =
-        Storage().getString(Constants.storageProductsAttributesColors);
+    var stringColors = Storage().getString(Constants.storageProductsAttributesColors);
 
     // 尺寸列表
-    var stringSizes =
-        Storage().getString(Constants.storageProductsAttributesSizes);
+    var stringSizes = Storage().getString(Constants.storageProductsAttributesSizes);
 
     colors = stringColors != ""
         ? jsonDecode(stringColors).map<KeyValueModel<AttributeModel>>((item) {
@@ -269,6 +266,28 @@ class ProductDetailsController extends GetxController
       mainRefreshController.refreshFailed();
     }
     update(["product_details"]);
+  }
+
+  // 加入购物车
+  void onAddCartTap() async {
+    // 检查是否登录
+    if (!await UserService.to.checkIsLogin()) {
+      return;
+    }
+
+    // 检查空
+    if (product == null || product?.id == null) {
+      Loading.error("product is empty");
+      return;
+    }
+
+    // 加入购物车
+    CartService.to.addCart(LineItem(
+      productId: productId,
+      product: product,
+    ));
+    // 返回、或者去购物车
+    Get.back();
   }
 
   // @override

@@ -17,6 +17,7 @@ export 'woo/attribute_model/attribute_model.dart';
 export 'woo/review_model/review_model.dart';
 export 'woo/tags_model/tags_model.dart';
 export 'woo/order_model/order_model.dart';
+export 'woo/order_model/line_item.dart';
 
 // 注意：多个模型中有相同的数据结构，只需选一个即可。比如：
 // \lib\common\models\woo\user_profile_model\billing.dart

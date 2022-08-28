@@ -35,8 +35,7 @@ class _MainViewGetX extends GetView<MainController> {
       // 防止连续点击两次退出
       onWillPop: () async {
         if (_lastPressedAt == null ||
-            DateTime.now().difference(_lastPressedAt!) >
-                const Duration(seconds: 1)) {
+            DateTime.now().difference(_lastPressedAt!) > const Duration(seconds: 1)) {
           _lastPressedAt = DateTime.now();
           Loading.toast('Press again to exit');
           return false;
@@ -51,30 +50,31 @@ class _MainViewGetX extends GetView<MainController> {
         bottomNavigationBar: GetBuilder<MainController>(
           id: 'navigation',
           builder: (controller) {
-            return BuildNavigation(
-              currentIndex: controller.currentIndex,
-              items: [
-                NavigationItemModel(
-                  label: LocaleKeys.tabBarHome.tr,
-                  icon: AssetsSvgs.navHomeSvg,
-                ),
-                NavigationItemModel(
-                  label: LocaleKeys.tabBarCart.tr,
-                  icon: AssetsSvgs.navCartSvg,
-                  count: 99,
-                ),
-                NavigationItemModel(
-                  label: LocaleKeys.tabBarMessage.tr,
-                  icon: AssetsSvgs.navMessageSvg,
-                  count: 55,
-                ),
-                NavigationItemModel(
-                  label: LocaleKeys.tabBarProfile.tr,
-                  icon: AssetsSvgs.navProfileSvg,
-                ),
-              ],
-              onTap: controller.onJumpToPage, // 切换tab事件
-            );
+            return Obx(() => BuildNavigation(
+                  currentIndex: controller.currentIndex,
+                  items: [
+                    NavigationItemModel(
+                      label: LocaleKeys.tabBarHome.tr,
+                      icon: AssetsSvgs.navHomeSvg,
+                    ),
+                    NavigationItemModel(
+                      label: LocaleKeys.tabBarCart.tr,
+                      icon: AssetsSvgs.navCartSvg,
+                      // 购物车数量
+                      count: CartService.to.lineItemsCount,
+                    ),
+                    NavigationItemModel(
+                      label: LocaleKeys.tabBarMessage.tr,
+                      icon: AssetsSvgs.navMessageSvg,
+                      count: 55,
+                    ),
+                    NavigationItemModel(
+                      label: LocaleKeys.tabBarProfile.tr,
+                      icon: AssetsSvgs.navProfileSvg,
+                    ),
+                  ],
+                  onTap: controller.onJumpToPage, // 切换tab事件
+                ));
           },
         ),
         // 内容页

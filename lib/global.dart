@@ -9,8 +9,7 @@ import 'common/services/wp_http.dart';
 class Global {
   static Future<void> init() async {
     // WidgetsFlutterBinding.ensureInitialized(); // 等待Flutter初始化完成
-    WidgetsBinding widgetsBinding =
-        WidgetsFlutterBinding.ensureInitialized(); // 等待Flutter初始化完成
+    WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized(); // 等待Flutter初始化完成
     FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
     // 系统样式
@@ -24,10 +23,11 @@ class Global {
     //   Get.putAsync<ConfigService>(() async => await ConfigService().init()), // Get.put 方式直接注入
     // ]).whenComplete(() {});
 
-    // 初始化服务
-    Get.put<ConfigService>(ConfigService()); // Get.put 方式直接注入
-    Get.put<WPHttpService>(WPHttpService()); // Get.put 方式直接注入
-    Get.put<UserService>(UserService()); // Get.put 方式直接注入
+    // 初始化服务，Get.put 方式直接注入
+    Get.put<ConfigService>(ConfigService());
+    Get.put<WPHttpService>(WPHttpService());
+    Get.put<UserService>(UserService());
+    Get.put<CartService>(CartService());
   }
 
   // 系统样式
