@@ -18,6 +18,10 @@ class CartIndexPage extends GetView<CartIndexController> {
         // 购物车项
         return CartItem(
           lineItem: item,
+          // 是否选中
+          isSelected: controller.isSelected(item.productId!),
+          // 选中回调
+          onSelect: (isSelected) => controller.onSelect(item.productId!, isSelected),
         ).paddingAll(AppSpace.card).card();
       },
       separatorBuilder: (BuildContext context, int index) {
@@ -93,6 +97,11 @@ class CartIndexPage extends GetView<CartIndexController> {
   Widget _buildView() {
     return <Widget>[
       // 顶部操作栏
+      ActionBar(
+        onAll: controller.onSelectAll,
+        onRemove: controller.onOrderCancel,
+        isAll: controller.isSelectedAll,
+      ).paddingAll(AppSpace.page),
 
       // 订单列表
       _buildOrders().paddingHorizontal(AppSpace.page).expanded(),
