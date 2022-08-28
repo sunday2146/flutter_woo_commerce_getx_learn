@@ -5,7 +5,8 @@ import 'package:flutter_woo_commerce_getx_learn/common/index.dart';
 import 'package:get/get.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 
-class ProductDetailsController extends GetxController with GetSingleTickerProviderStateMixin {
+class ProductDetailsController extends GetxController
+    with GetSingleTickerProviderStateMixin {
   ProductDetailsController();
 
   // 主界面 刷新控制器
@@ -108,10 +109,12 @@ class ProductDetailsController extends GetxController with GetSingleTickerProvid
   // 读取缓存
   _loadCache() async {
     // 颜色列表
-    var stringColors = Storage().getString(Constants.storageProductsAttributesColors);
+    var stringColors =
+        Storage().getString(Constants.storageProductsAttributesColors);
 
     // 尺寸列表
-    var stringSizes = Storage().getString(Constants.storageProductsAttributesSizes);
+    var stringSizes =
+        Storage().getString(Constants.storageProductsAttributesSizes);
 
     colors = stringColors != ""
         ? jsonDecode(stringColors).map<KeyValueModel<AttributeModel>>((item) {

@@ -67,7 +67,8 @@ class MyAddressController extends GetxController {
   void _filterStates(String countryCode) {
     for (var i = 0; i < continents.length; i++) {
       var continent = continents[i];
-      var country = continent.countries!.firstWhereOrNull((el) => el.code == countryCode);
+      var country =
+          continent.countries!.firstWhereOrNull((el) => el.code == countryCode);
       if (country != null) {
         statesList = List.generate(country.states?.length ?? 0, (index) {
           var state = country.states?.elementAt(index);
@@ -120,7 +121,8 @@ class MyAddressController extends GetxController {
       // 大陆
       var continent = continents[i];
       // 检查是否有选中的国家
-      int iCountryIndex = continent.countries?.indexWhere((el) => el.code == countryCode) ?? 0;
+      int iCountryIndex =
+          continent.countries?.indexWhere((el) => el.code == countryCode) ?? 0;
       if (iCountryIndex > 0) {
         countrySels = [
           i,

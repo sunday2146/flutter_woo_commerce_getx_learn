@@ -148,7 +148,8 @@ class CheckBoxWidget extends StatelessWidget {
               width: 1,
             )
           : null,
-      borderRadius: size != null ? BorderRadius.all(Radius.circular(size! / 2)) : null,
+      borderRadius:
+          size != null ? BorderRadius.all(Radius.circular(size! / 2)) : null,
     ));
 
     if (label != null) {

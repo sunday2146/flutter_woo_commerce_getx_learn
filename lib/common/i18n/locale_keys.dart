@@ -145,4 +145,5 @@ class LocaleKeys {
   static const gCartBtnCheckout = "goods_cart_btn_checkout";
   static const gCartTextShippingCost = "goods_cart_text_shipping_cost";
   static const gCartTextVocher = "goods_cart_text_vocher";
-  static const gCartTextTotal = "goods_cart_text_total";}
+  static const gCartTextTotal = "goods_cart_text_total";
+}

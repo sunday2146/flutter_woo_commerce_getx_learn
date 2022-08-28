@@ -9,7 +9,8 @@ import 'common/services/wp_http.dart';
 class Global {
   static Future<void> init() async {
     // WidgetsFlutterBinding.ensureInitialized(); // 等待Flutter初始化完成
-    WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized(); // 等待Flutter初始化完成
+    WidgetsBinding widgetsBinding =
+        WidgetsFlutterBinding.ensureInitialized(); // 等待Flutter初始化完成
     FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
     // 系统样式

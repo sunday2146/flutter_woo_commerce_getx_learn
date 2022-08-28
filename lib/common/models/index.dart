@@ -29,3 +29,4 @@ export 'woo/order_model/shipping.dart';
 
 export 'woo/continents_model/continents_model.dart';
 export 'woo/continents_model/country.dart';
+export 'woo/coupons_model/coupons_model.dart';
