@@ -72,4 +72,8 @@ class UserService extends GetxService {
     }
     return true;
   }
+
+  /// 送货地址
+  String get shipping =>
+      "${profile.shipping?.address1}, ${profile.shipping?.postcode}, ${profile.shipping?.state}, ${profile.shipping?.country}";
 }
