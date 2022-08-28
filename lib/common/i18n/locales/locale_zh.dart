@@ -38,14 +38,11 @@ Map<String, String> localeZh = {
 
   // welcome 欢迎
   LocaleKeys.welcomeOneTitle: '选择您喜欢的产品',
-  LocaleKeys.welcomeOneDesc:
-      'Contrary to popular belief, Lorem Ipsum is not simply random text',
+  LocaleKeys.welcomeOneDesc: 'Contrary to popular belief, Lorem Ipsum is not simply random text',
   LocaleKeys.welcomeTwoTitle: '完成您的购物',
-  LocaleKeys.welcomeTwoDesc:
-      'Contrary to popular belief, Lorem Ipsum is not simply random text',
+  LocaleKeys.welcomeTwoDesc: 'Contrary to popular belief, Lorem Ipsum is not simply random text',
   LocaleKeys.welcomeThreeTitle: '足不出户的购物体验',
-  LocaleKeys.welcomeThreeDesc:
-      'Contrary to popular belief, Lorem Ipsum is not simply random text',
+  LocaleKeys.welcomeThreeDesc: 'Contrary to popular belief, Lorem Ipsum is not simply random text',
   LocaleKeys.welcomeSkip: '跳过',
   LocaleKeys.welcomeNext: '下一页',
   LocaleKeys.welcomeStart: '立刻开始',
@@ -151,4 +148,22 @@ Map<String, String> localeZh = {
   LocaleKeys.gCartTextShippingCost: '配送费',
   LocaleKeys.gCartTextVocher: '代金券',
   LocaleKeys.gCartTextTotal: '合计',
+
+  // 下单 Checkout
+  LocaleKeys.placeOrderTitle: '确认订单',
+  LocaleKeys.placeOrderPayment: '支付方式',
+  LocaleKeys.placeOrderShippingAddress: '送货地址',
+  LocaleKeys.placeOrderQuantity: '数量',
+  LocaleKeys.placeOrderPrice: '价格',
+  LocaleKeys.placeOrderPriceShipping: '运费',
+  LocaleKeys.placeOrderPriceDiscount: '折扣',
+  LocaleKeys.placeOrderPriceVoucherCode: '代金券',
+  LocaleKeys.placeOrderPriceVoucherCodeEnter: '输入代金券',
+  LocaleKeys.placeOrderTotal: '小计',
+  LocaleKeys.placeOrderBtnPlaceOrder: '下单确认',
+
+  // 下单确认
+  LocaleKeys.orderConfirmationTitle: '已下订单',
+  LocaleKeys.orderConfirmationDesc: '您的订单已成功下达',
+  LocaleKeys.orderConfirmationBtnHome: '返回首页',
 };

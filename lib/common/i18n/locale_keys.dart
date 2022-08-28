@@ -146,4 +146,22 @@ class LocaleKeys {
   static const gCartTextShippingCost = "goods_cart_text_shipping_cost";
   static const gCartTextVocher = "goods_cart_text_vocher";
   static const gCartTextTotal = "goods_cart_text_total";
+
+  // 下单 checkout
+  static const placeOrderTitle = "place_order_title";
+  static const placeOrderPayment = "place_order_payment";
+  static const placeOrderShippingAddress = "place_order_shipping_address";
+  static const placeOrderQuantity = "place_order_quantity";
+  static const placeOrderPrice = "place_order_price";
+  static const placeOrderPriceShipping = "place_order_price_shipping";
+  static const placeOrderPriceDiscount = "place_order_price_discount";
+  static const placeOrderPriceVoucherCode = "place_order_price_voucher_code";
+  static const placeOrderPriceVoucherCodeEnter = "place_order_price_voucher_code_enter";
+  static const placeOrderTotal = "place_order_total";
+  static const placeOrderBtnPlaceOrder = "place_order_btn_place_order";
+
+  // 下单确认
+  static const orderConfirmationTitle = "order_confirmation_title";
+  static const orderConfirmationDesc = "order_confirmation_desc";
+  static const orderConfirmationBtnHome = "order_confirmation_btn_home";
 }

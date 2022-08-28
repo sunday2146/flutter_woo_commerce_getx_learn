@@ -24,10 +24,10 @@ class RoutePages {
       name: RouteNames.cartBuyDone,
       page: () => const BuyDonePage(),
     ),
-    GetPage(
-      name: RouteNames.cartBuyNow,
-      page: () => const BuyNowPage(),
-    ),
+    // GetPage(
+    //   name: RouteNames.cartBuyNow,
+    //   page: () => const BuyNowPage(),
+    // ),
     GetPage(
       name: RouteNames.cartCartIndex,
       page: () => const CartIndexPage(),

@@ -1,13 +1,26 @@
+import 'package:flutter_woo_commerce_getx_learn/common/index.dart';
 import 'package:get/get.dart';
 
 class BuyNowController extends GetxController {
-  BuyNowController();
+  BuyNowController(this.product);
+
+  // 支付方式图标
+  List<String> paymentList = [
+    AssetsImages.pVisaPng,
+    AssetsImages.pCashPng,
+    AssetsImages.pMastercardPng,
+    AssetsImages.pPaypalPng,
+  ];
+
+  // 商品详情
+  final ProductModel product;
 
   _initData() {
     update(["buy_now"]);
   }
 
-  void onTap() {}
+  // 下单 checkout
+  void onCheckout() async {}
 
   // @override
   // void onInit() {
@@ -20,8 +33,8 @@ class BuyNowController extends GetxController {
     _initData();
   }
 
-  // @override
-  // void onClose() {
-  //   super.onClose();
-  // }
+// @override
+// void onClose() {
+//   super.onClose();
+// }
 }
