@@ -166,4 +166,9 @@ Map<String, String> localeZh = {
   LocaleKeys.orderConfirmationTitle: '已下订单',
   LocaleKeys.orderConfirmationDesc: '您的订单已成功下达',
   LocaleKeys.orderConfirmationBtnHome: '返回首页',
+
+  // 优惠码
+  LocaleKeys.promoCode: '使用优惠码',
+  LocaleKeys.promoDesc: '促销代码只是印刷和排版行业的虚拟文本',
+  LocaleKeys.promoEnterCodeTip: '输入代码',
 };

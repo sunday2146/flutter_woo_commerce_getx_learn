@@ -166,4 +166,9 @@ Map<String, String> localeEn = {
   LocaleKeys.orderConfirmationTitle: 'Order Placed',
   LocaleKeys.orderConfirmationDesc: 'Your order was placed Successfully',
   LocaleKeys.orderConfirmationBtnHome: 'Go Home',
+
+  // 优惠码
+  LocaleKeys.promoCode: 'Apply Promo Code',
+  LocaleKeys.promoDesc: 'Promo Code is simply dummy text the printing and typesetting industry',
+  LocaleKeys.promoEnterCodeTip: 'Enter code here',
 };

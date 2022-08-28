@@ -1,7 +1,11 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class ApplyPromoCodeController extends GetxController {
   ApplyPromoCodeController();
+
+  // 优惠券控制器
+  TextEditingController couponController = TextEditingController();
 
   _initData() {
     update(["apply_promo_code"]);
@@ -20,8 +24,9 @@ class ApplyPromoCodeController extends GetxController {
     _initData();
   }
 
-  // @override
-  // void onClose() {
-  //   super.onClose();
-  // }
+  @override
+  void onClose() {
+    super.onClose();
+    couponController.dispose();
+  }
 }
