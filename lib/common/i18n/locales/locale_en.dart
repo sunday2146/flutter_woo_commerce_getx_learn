@@ -171,4 +171,20 @@ Map<String, String> localeEn = {
   LocaleKeys.promoCode: 'Apply Promo Code',
   LocaleKeys.promoDesc: 'Promo Code is simply dummy text the printing and typesetting industry',
   LocaleKeys.promoEnterCodeTip: 'Enter code here',
+
+  // 订单页
+  LocaleKeys.orderListTitle: 'Order List',
+  LocaleKeys.orderDetailsTitle: 'Order Detail',
+  LocaleKeys.orderDetailsOrderID: 'Order ID',
+  LocaleKeys.orderDetailsBillFrom: 'Bill From',
+  LocaleKeys.orderDetailsBillTo: 'Bill To',
+  LocaleKeys.orderDetailsProduct: 'Product',
+  LocaleKeys.orderDetailsRateQty: 'Rate & Qty',
+  LocaleKeys.orderDetailsAmount: 'Amount',
+  LocaleKeys.orderDetailsPaymentMethod: 'Payment Method',
+  LocaleKeys.orderDetailsBalance: 'Balance',
+  LocaleKeys.orderDetailsTotal: 'Total',
+  LocaleKeys.orderDetailsPaid: 'Paid',
+  LocaleKeys.orderDetailsShipping: 'Shipping',
+  LocaleKeys.orderDetailsDiscount: 'Discount',
 };

@@ -169,4 +169,20 @@ class LocaleKeys {
   static const promoCode = "promo_code";
   static const promoDesc = "promo_desc";
   static const promoEnterCodeTip = "promo_enter_code_tip";
+
+  // 订单页
+  static const orderListTitle = "order_list_title";
+  static const orderDetailsTitle = "order_details_title";
+  static const orderDetailsOrderID = "order_details_order_id";
+  static const orderDetailsBillFrom = "order_details_bill_from";
+  static const orderDetailsBillTo = "order_details_bill_to";
+  static const orderDetailsProduct = "order_details_product";
+  static const orderDetailsRateQty = "order_details_rate_qty";
+  static const orderDetailsAmount = "order_details_amount";
+  static const orderDetailsPaymentMethod = "order_details_payment_method";
+  static const orderDetailsBalance = "order_details_balance";
+  static const orderDetailsPaid = "order_details_paid";
+  static const orderDetailsTotal = "order_details_total";
+  static const orderDetailsShipping = "order_details_shipping";
+  static const orderDetailsDiscount = "order_details_discount";
 }
