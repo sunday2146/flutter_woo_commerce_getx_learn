@@ -187,4 +187,19 @@ Map<String, String> localeZh = {
   LocaleKeys.orderDetailsPaid: '支付',
   LocaleKeys.orderDetailsShipping: '运费',
   LocaleKeys.orderDetailsDiscount: '折扣',
+
+  // 拍照、相册
+  LocaleKeys.pickerTakeCamera: '拍照',
+  LocaleKeys.pickerSelectAlbum: '从相册中选取',
+
+  // 个人信息修改
+  LocaleKeys.profileEditTitle: '修改信息',
+  LocaleKeys.profileEditMyPhoto: '头像',
+  LocaleKeys.profileEditFirstName: '姓',
+  LocaleKeys.profileEditLastName: '名',
+  LocaleKeys.profileEditEmail: '邮件',
+  LocaleKeys.profileEditOldPassword: '旧密码',
+  LocaleKeys.profileEditNewPassword: '新密码',
+  LocaleKeys.profileEditConfirmPassword: '确认密码',
+  LocaleKeys.profileEditPasswordTip: '不输入表示不修改',
 };

@@ -187,4 +187,19 @@ Map<String, String> localeEn = {
   LocaleKeys.orderDetailsPaid: 'Paid',
   LocaleKeys.orderDetailsShipping: 'Shipping',
   LocaleKeys.orderDetailsDiscount: 'Discount',
+
+  // 拍照、相册
+  LocaleKeys.pickerTakeCamera: 'Take camera',
+  LocaleKeys.pickerSelectAlbum: 'Select from album',
+
+  // 个人信息修改
+  LocaleKeys.profileEditTitle: 'Edit Profile',
+  LocaleKeys.profileEditMyPhoto: 'My photo',
+  LocaleKeys.profileEditFirstName: 'First name',
+  LocaleKeys.profileEditLastName: 'Last name',
+  LocaleKeys.profileEditEmail: 'Email',
+  LocaleKeys.profileEditOldPassword: 'Old password',
+  LocaleKeys.profileEditNewPassword: 'New password',
+  LocaleKeys.profileEditConfirmPassword: 'Confirm password',
+  LocaleKeys.profileEditPasswordTip: 'No input means no modification',
 };
