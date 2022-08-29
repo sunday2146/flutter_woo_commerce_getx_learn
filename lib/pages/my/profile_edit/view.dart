@@ -13,17 +13,26 @@ class ProfileEditPage extends GetView<ProfileEditController> {
     return ListTileWidget(
       title: TextWidget.body1(LocaleKeys.profileEditMyPhoto.tr),
       trailing: [
-        ImageWidget.url(
-          // UserService.to.profile.avatarUrl,
-          "https://ducafecat.oss-cn-beijing.aliyuncs.com/avatar/00258VC3ly1gty0r05zh2j60ut0u0tce02.jpg",
-          width: 50.w,
-          height: 50.w,
-          fit: BoxFit.cover,
-          radius: 25.w,
-        ),
+        controller.filePhoto != null
+            ? ImageWidget.file(
+                controller.filePhoto?.path ?? "",
+                width: 50.w,
+                height: 50.w,
+                fit: BoxFit.cover,
+                radius: 25.w,
+              )
+            : ImageWidget.url(
+                // UserService.to.profile.avatarUrl,
+                "https://ducafecat.oss-cn-beijing.aliyuncs.com/avatar/00258VC3ly1gty0r05zh2j60ut0u0tce02.jpg",
+                width: 50.w,
+                height: 50.w,
+                fit: BoxFit.cover,
+                radius: 25.w,
+              ),
       ],
       padding: EdgeInsets.all(AppSpace.card),
-    ).card().height(90.h).paddingBottom(AppSpace.card);
+      onTap: controller.onSelectPhoto,
+    ).card().height(120.h).paddingBottom(AppSpace.card);
   }
 
   //  profile 表单
@@ -58,6 +67,8 @@ class ProfileEditPage extends GetView<ProfileEditController> {
         // 保存按钮
         ButtonWidget.primary(
           LocaleKeys.commonBottomSave.tr,
+          onTap: controller.onSave, // 保存函数的调用
+          height: AppSpace.buttonHeight,
         ).paddingHorizontal(AppSpace.page),
       ].toColumn().padding(
             top: 45.h,

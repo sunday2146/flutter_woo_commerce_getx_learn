@@ -66,4 +66,17 @@ class UserApi {
     }
     return continents;
   }
+
+  /// 保存用户 first name 、 last name 、 email
+  static Future<UserProfileModel> saveBaseInfo(UserProfileModel req) async {
+    var res = await WPHttpService.to.put(
+      '/users/me',
+      data: {
+        "first_name": req.firstName,
+        "last_name": req.lastName,
+        "email": req.email,
+      },
+    );
+    return UserProfileModel.fromJson(res.data);
+  }
 }

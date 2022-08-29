@@ -1,25 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ducafecat.woo_commerce.flutter_woo_commerce_getx_learn">
 
-    <!-- Internet permissions do not affect the `permission_handler` plugin,
-     but are required if your app needs access to the internet. -->
-    <uses-permission android:name="android.permission.INTERNET" />
-
-    <!-- Permissions options for the `storage` group -->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
-    <!-- Permissions options for the `camera` group -->
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
-
-    <!-- Permissions options for the `microphone` or `speech` group -->
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-
     <!-- 修改 Android App 桌面图标名称: android:label="flutter_woo_commerce_getx_learn" -->
     <application
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
+        android:requestLegacyExternalStorage="true"
         android:label="woo">
         <activity
             android:name=".MainActivity"
@@ -47,4 +33,22 @@
             android:name="flutterEmbedding"
             android:value="2" />
     </application>
+
+
+
+
+    <!-- Internet permissions do not affect the `permission_handler` plugin,
+ but are required if your app needs access to the internet. -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <!-- Permissions options for the `storage` group -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <!-- Permissions options for the `camera` group -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION"/>
+
+    <!-- Permissions options for the `microphone` or `speech` group -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
 </manifest>

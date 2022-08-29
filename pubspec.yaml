@@ -71,6 +71,10 @@ dependencies:
   flutter_picker: 2.0.3 # picker 选择器，去掉 ^ 是指定版本号
   modal_bottom_sheet: 2.0.1 # 底部弹出，去掉 ^ 是指定版本号
   permission_handler: 9.2.0 # permission 权限
+  # 媒体选择
+  wechat_assets_picker: 7.2.0 # 安卓模拟器运行报错
+#  wechat_assets_picker: ^8.0.1
+  wechat_camera_picker: 3.1.0
 
 dev_dependencies:
   flutter_test:

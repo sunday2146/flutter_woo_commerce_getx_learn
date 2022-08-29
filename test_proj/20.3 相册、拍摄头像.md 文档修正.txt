@@ -1,0 +1,85 @@
+文档 20.3 相册、拍摄头像.md 修正：
+
+该节操作缺少保存函数及其调用代码，导致选择或拍照后无法保存
+
+1、第 5 步：控制器 lib/pages/my/profile_edit/controller.dart 缺少：
+  // 保存
+  Future<void> onSave() async {
+    if ((formKey.currentState as FormState).validate()) {
+      // 密码 email 不修改 影响登录
+
+      // 提交
+      UserProfileModel profile = await UserApi.saveBaseInfo(UserProfileModel(
+        firstName: firstNameController.text,
+        lastName: lastNameController.text,
+        // 注意：必须取消该行注释。否则在Edit Profile页面，点击 Save 后报错提示：无效参数： email
+        email: emailController.text,
+      ));
+
+      // 更新本地
+      UserService.to.setProfile(profile);
+      Loading.success();
+      update(["profile_edit"]);
+    }
+  }
+
+2、\lib\common\api\user.dart 缺少函数：
+  /// 保存用户 first name 、 last name 、 email
+  static Future<UserProfileModel> saveBaseInfo(UserProfileModel req) async {
+    var res = await WPHttpService.to.put(
+      '/users/me',
+      data: {
+        "first_name": req.firstName,
+        "last_name": req.lastName,
+        "email": req.email,
+      },
+    );
+    return UserProfileModel.fromJson(res.data);
+  }
+
+3、\lib\pages\my\profile_edit\view.dart文件的该函数缺少保存函数的调用：
+  // 主视图
+  Widget _buildView() {
+    return SingleChildScrollView(
+      child: <Widget>[
+        // 头像
+        _buildAvatar(),
+
+        // 表单
+        Form(
+          key: controller.formKey, //设置globalKey，用于后面获取FormState
+          autovalidateMode: AutovalidateMode.onUserInteraction,
+          child: <Widget>[
+            // profile 表单
+            _buildProfileForm(),
+            // password 表单
+            _buildPasswordForm(),
+          ].toColumn(),
+        ).paddingBottom(AppSpace.card),
+
+        // 保存按钮
+        ButtonWidget.primary(
+          LocaleKeys.commonBottomSave.tr,
+          onTap: controller.onSave,		// 保存函数的调用
+          height: AppSpace.buttonHeight,
+        ).paddingHorizontal(AppSpace.page),
+      ].toColumn().padding(
+            top: 45.h,
+          ),
+    );
+  }
+
+4、需要在项目的 \android\app\src\main\AndroidManifest.xml 文件中添加 android:requestLegacyExternalStorage="true"：
+	如果您以 Android 10（API 级别 29） 为目标平台，则需要在AndroidManifest.xml文件中将 requestLegacyExternalStorage 的值设置为 true：
+
+<manifest ... >
+  <!-- This attribute is "false" by default on apps targeting
+       Android 10. -->
+  <application android:requestLegacyExternalStorage="true" ... >
+    ...
+  </application>
+</manifest>
+
+否则，选择照片、拍照保存照片时会报错：
+
+E/flutter (28780): [ERROR:flutter/lib/ui/ui_dart_state.cc(198)] Unhandled Exception: PlatformException(STORAGE_NOT_LEGACY, Use `requestLegacyExternalStorage` when your project is targeting above Android Q., null, null)
