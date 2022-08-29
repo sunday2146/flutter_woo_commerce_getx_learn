@@ -51,5 +51,11 @@
 		<true/>
 		<key>UIStatusBarHidden</key>
 		<false/>
+        <key>NSCameraUsageDescription</key>
+        <string>Need to access the camera to take photos and videos to share with friends.</string>
+        <key>NSMicrophoneUsageDescription</key>
+        <string>Requires access to the microphone to shoot video and voice to share with friends.</string>
+        <key>NSPhotoLibraryUsageDescription</key>
+        <string>Requires access to the photo library to read videos and photos to share with friends.</string>
 	</dict>
 </plist>

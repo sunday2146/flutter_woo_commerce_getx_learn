@@ -70,6 +70,7 @@ dependencies:
   another_xlider: 1.0.1+2 # 去掉 ^ 是指定 1.0.1+2 版本
   flutter_picker: 2.0.3 # picker 选择器，去掉 ^ 是指定版本号
   modal_bottom_sheet: 2.0.1 # 底部弹出，去掉 ^ 是指定版本号
+  permission_handler: 9.2.0 # permission 权限
 
 dev_dependencies:
   flutter_test:
